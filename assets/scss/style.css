@@ -4,9 +4,9 @@
 
 .card-custom-1 {
     background-color: rgb(0, 0, 0, 0.7); border:1px solid #545454; 
-    box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.75);
-    -webkit-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.75);
-    -moz-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.75);
+    box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
+    -webkit-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
+    -moz-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
     backdrop-filter: blur(5px);
 }
 
