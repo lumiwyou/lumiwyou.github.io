@@ -1,6 +1,7 @@
 :root {
     --highlight-color: #f70080;
     --secondary-color: #0f0f0f;
+    --barred-opacity: 0.5;
 }
 
 .card-custom-1 {
@@ -86,4 +87,31 @@ hr {
 .btn-override {
     border-color: var(--highlight-color); 
     background-color: var(--secondary-color);
+}
+
+.btn-override:hover {
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
+
+.btn-barred {
+    --barred-opacity: 0.5;
+    --highlight-faded: color-mix(
+        in srgb,
+        var(--highlight-color),
+        transparent calc((1 - var(--barred-opacity)) * 100%)
+    );
+
+    background-image: linear-gradient(
+        45deg,
+        var(--highlight-faded) 16.67%,
+        transparent 16.67%,
+        transparent 50%,
+        var(--highlight-faded) 50%,
+        var(--highlight-faded) 66.67%,
+        transparent 66.67%,
+        transparent 100%
+    );
+
+    background-size: 21.21px 21.21px;
 }
