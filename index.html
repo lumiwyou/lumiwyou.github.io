@@ -48,7 +48,7 @@
             </div>
         </div>
     </header>
-    <div class="offcanvas offcanvas-top show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <!--<div class="offcanvas offcanvas-top show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasLabel">Notice</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -59,9 +59,9 @@
                 <li>Broken contact form</li>
             </ul>
         </div>
-    </div>
+    </div>-->
     <main class="flex-grow-1 bg-black">
-        <section class="container section-custom-1">
+        <section class="container section-custom-1" style="background-image: url(./assets/images/);">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-6 h-100">
                     <div>
@@ -85,7 +85,7 @@
                                     <button class="btn w-100" style="background-color: var(--highlight-color);" onclick="location.href='#contact'">Contact</button>
                                 </div>
                                 <div class="col p-1">
-                                    <button class="btn btn-dark w-100" style="border-color: var(--highlight-color);" onclick="location.href='#projects'">Work</button>
+                                    <button class="btn btn-dark w-100" style="border-color: var(--highlight-color);" onclick="location.href='#work'">My work</button>
                                 </div>
                             </div>
                             <div class="row">
@@ -98,140 +98,118 @@
                 </div>
             </div>
         </section>
-        <div class="d-flex flex-row justify-content-center">
-            <img src="assets/images/arrow-down.png" height="auto" width="5%" height="auto" alt="" onclick="location.href='#whatido'">
-        </div>
         <section class="container section-custom-1" id="whatido">
-            <div class="row">
-                <div class="row">
-                    <div class="pt-4">
-                        <h1>What do I do?</h1>
+            <div class="row g-3">
+                <h1>What do I do?</h1>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-2 text-white card-custom-1 h-100">
+                        <div class="container">
+                            <h3>Programming</h3>
+                            <hr>
+                            <p>
+                                Develop using JavaScript, C#, C/C++ and Python.
+                            </p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row g-3">
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card p-2 text-white card-custom-1 h-100">
-                            <div class="container">
-                                <h3>Programming</h3>
-                                <hr>
-                                <p>
-                                    Develop using JavaScript, C#, C/C++ and Python.
-                                </p>
-                            </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-2 text-white card-custom-1 h-100">
+                        <div class="container">
+                            <h3>Design</h3>
+                            <hr>
+                            <p>
+                                Enjoy creating digital design (e.g. logos) using software such as Affinity Design or Adobe Photoshop.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card p-2 text-white card-custom-1 h-100">
-                            <div class="container">
-                                <h3>Design</h3>
-                                <hr>
-                                <p>
-                                    Enjoy creating digital design (e.g. logos) using software such as Affinity Design or Adobe Photoshop.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card p-2 text-white card-custom-1 h-100">
+                        <div class="container">
+                            <h3>Frontend</h3>
+                            <hr>
+                            <p>
+                                Planning, design, prototyping, and implementation of frontend web application design (like this website) using technologies like HTML/CSS and dynamic JavaScript. Lately I have found an interest for Bootstrap ❤️
+                            </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card p-2 text-white card-custom-1 h-100">
-                            <div class="container">
-                                <h3>Frontend</h3>
-                                <hr>
-                                <p>
-                                    Planning, design, prototyping, and implementation of frontend web application design (like this website) using technologies like HTML/CSS and dynamic JavaScript. Lately I have found an interest for Bootstrap ❤️
-                                </p>
-                            </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card p-2 text-white card-custom-1 h-100">
+                        <div class="container">
+                            <h3>Backend</h3>
+                            <hr>
+                            <p>
+                                Planning, design, implementation, and deployment of backend systems such as REST APIs and databases using technologies like NodeJS, Postgres, Docker, and Linux systems.
+                            </p>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card p-2 text-white card-custom-1 h-100">
-                            <div class="container">
-                                <h3>Backend</h3>
-                                <hr>
-                                <p>
-                                    Planning, design, implementation, and deployment of backend systems such as REST APIs and databases using technologies like NodeJS, Postgres, Docker, and Linux systems.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class="card p-2 text-white card-custom-1 h-100">
-                            <div class="container">
-                                <h3>Linux</h3>
-                                <hr>
-                                <p>
-                                    Speaking of Linux - I love using Linux and have used it as a daily driver for the past 4+ years. I am capable in configuring, hardening, patching, troubleshooting, and deploying Linux systems on hardware or in virtualization environments or containers.
-                                </p>
-                            </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card p-2 text-white card-custom-1 h-100">
+                        <div class="container">
+                            <h3>Linux</h3>
+                            <hr>
+                            <p>
+                                Speaking of Linux - I love using Linux and have used it as a daily driver for the past 4+ years. I am capable in configuring, hardening, patching, troubleshooting, and deploying Linux systems on hardware or in virtualization environments or containers.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="projects" class="container section-custom-1">
+        <section class="container section-custom-1" id="work">
             <div class="row">
                 <div class="container">
                     <div class="row">
                         <div class="pt-4">
-                            <h1 class="mb-3">Projects</h1>
-                            <p>You can find my projects on github at <a style="color:var(--highlight-color);" href="https://github.com/lumiwyou">@lumiwyou</a>.</p>
-                            <div onclick="window.open('https://github.com/lumiwyou/mediaflix')" class="col card p-2 mt-2 text-white card-custom-1 project">
-                            <div class="container">
+                            <h1 class="mb-3">My work</h1>
+                            <div class="container card p-4 mt-2 text-white card-custom-1">
                                 <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/mediaflix/main/docs/assets/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    <div class="col-12 col-md-3">
+                                        <img class="certificate-custom-1 img-fluid w-100" src="https://raw.githubusercontent.com/lumiwyou/mediaflix/main/docs/assets/logo.png" alt="">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12 col-md-9">
                                         <h3>Mediaflix</h3>
                                         <h2 style="font-size: small; color:var(--highlight-color);">2026-in-progress</h2>
-                                        <hr>
                                         <p>A media streaming service developed using typescript and NodeJS</p>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
-                            <div onclick="window.open('https://github.com/lumiwyou/safeheap')" class="col card p-2 mt-2 text-white card-custom-1 project">
-                            <div class="container">
+                                <hr>
                                 <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/safeheap/main/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    <div class="col-12 col-md-3">
+                                        <img class="certificate-custom-1 img-fluid" src="https://raw.githubusercontent.com/lumiwyou/safeheap/main/logo.png" alt="">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12 col-md-9">
                                         <h3>Safeheap</h3>
                                         <h2 style="font-size: small; color:var(--highlight-color);">2024-in-progress</h2>
-                                        <hr>
                                         <p>A memory security library developed in and meant to be used for C/C++ applications</p>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
-                            <div onclick="window.open('https://github.com/lumiwyou/helpviewer-old')" class="col card p-2 mt-2 text-white card-custom-1 project">
-                            <div class="container">
+                                <hr>
                                 <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/helpviewer-old/v1-final/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    <div class="col-12 col-md-3">
+                                        <img class="certificate-custom-1 img-fluid" src="https://raw.githubusercontent.com/lumiwyou/helpviewer-old/v1-final/logo.png" alt="">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12 col-md-9">
                                         <h3>Helpviewer</h3>
                                         <h2 style="font-size: small; color:var(--highlight-color);">2026</h2>
-                                        <hr>
                                         <p>
                                             An application used to read Microsoft Helpviewer files, offering users an easy web user interface.
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            </div>
-                            <div class="col card p-2 mt-2 text-white card-custom-1 project project-barred" title="Project was lost due to unrecoverable data loss">
-                            <div class="container">
+                                <hr>
                                 <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/lumiwyou/refs/heads/main/aivi-old-project.png); background-size: contain; background-repeat: no-repeat;">
+                                    <div class="col-12 col-md-3">
+                                        <img class="certificate-custom-1 img-fluid" src="https://raw.githubusercontent.com/lumiwyou/lumiwyou/refs/heads/main/aivi-old-project.png" alt="">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-12 col-md-9">
                                         <h3>AIVI</h3>
                                         <h2 style="font-size: small; color:var(--highlight-color);">2020-2022-lost</h2>
-                                        <hr>
                                         <p>A chatbot developed in Python using markovian chain algorithms</p>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -243,7 +221,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="pt-4">
-                            <h1 class="mb-3">Contact</h1>
+                            <h1 class="mb-3">Projects</h1>
                             <div class="col card p-3 mt-2 text-white card-custom-1">
                                 <div>
                                     <div id="contactOverlay"
@@ -280,7 +258,7 @@
                 </div>
             </div>
         </section>
-        <section class="container section-custom-1" id="contact">
+        <section class="container section-custom-1" id="certificates">
             <div class="row">
                 <div class="container">
                     <div class="row">
