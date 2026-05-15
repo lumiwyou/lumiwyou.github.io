@@ -76,10 +76,6 @@
     border:2px solid var(--highlight-color);*/
 }
 
-img {
-    pointer-events: none;
-}
-
 hr {
     border: 0.5px solid darkgray;
 }
