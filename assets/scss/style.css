@@ -3,11 +3,11 @@
 }
 
 .card-custom-1 {
-    background-color: rgb(0, 0, 0, 0.7); border:1px solid #545454; 
-    box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
-    -webkit-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
-    -moz-box-shadow: 0px 0px 26px -11px rgba(207,207,207,0.5);
-    backdrop-filter: blur(5px);
+    background-color: rgb(0, 0, 0, 0.7); border:1px solid #212529; 
+    box-shadow: 0px 0px 26px -11px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 0px 0px 26px -11px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0px 0px 26px -11px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
 }
 
 .social-icon {
@@ -22,11 +22,11 @@
 
 .project {
     cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.4s ease, opacity 0.2s ease;
 }
 
 .project:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     opacity: 0.8;
 }
 
@@ -52,7 +52,8 @@
 }
 
 .section-custom-1 {
-    padding:3em;
+    padding-top:3em;
+    padding-bottom:3em;
 }
 
 .certificate-custom-1 {
@@ -69,4 +70,8 @@
 
 img {
     pointer-events: none;
+}
+
+hr {
+    border: 0.5px solid darkgray;
 }
