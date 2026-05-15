@@ -1,5 +1,6 @@
 :root {
     --highlight-color: #f70080;
+    --secondary-color: #0f0f0f;
 }
 
 .card-custom-1 {
@@ -80,4 +81,9 @@ img {
 
 hr {
     border: 0.5px solid darkgray;
+}
+
+.btn-override {
+    border-color: var(--highlight-color); 
+    background-color: var(--secondary-color);
 }
