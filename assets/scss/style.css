@@ -66,3 +66,7 @@
     opacity: 0.8;
     border:2px solid var(--highlight-color);*/
 }
+
+img {
+    pointer-events: none;
+}
