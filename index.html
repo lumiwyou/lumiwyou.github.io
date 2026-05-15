@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumi</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/scss/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100 text-white" style="background-color: #0f0f0f;">
+    <header style="height:100px; background-color: #0f0f0f; border-bottom:1px solid #545454;">
+        <div class="h-100 d-flex flex-row align-items-center justify-content-between ps-4 pe-4 w-100">
+            <div>
+                <img class="social-icon" src="assets/images/logo-dark.png" alt="" height="50px" onclick="window.location='/'">
+            </div>
+            <div>
+                <div class="d-flex flex-row justify-content-end" style="height: 50px;">
+                    <img 
+                        src="assets/images/github-light.webp" 
+                        alt="GitHub" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://github.com/lumiwyou', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/linkedin-dark.webp" 
+                        alt="LinkedIn" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://www.linkedin.com/in/lumi-hyv%C3%A4ri', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/hackerrank-dark.png" 
+                        alt="HackerRank" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://www.hackerrank.com/profile/lumi_hyvari', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/devto-dark.png" 
+                        alt="Dev.to" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://dev.to/lumiwyou', '_blank')"
+                    >
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="offcanvas offcanvas-top show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Notice</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>This website is under early construction and may have following issues:</p>
+            <ul>
+                <li>Broken contact form</li>
+            </ul>
+        </div>
+    </div>
+    <main class="flex-grow-1" style="background-color: black;">
+        <section class="container section-custom-1">
+            <div class="row justify-content-center">
+                <!--<div class="col-12 col-lg-6">
+                    <div class="d-flex justify-content-center h-100 pe-5">
+                        <img class="justify-content-center" src="assets/images/selfie.png" alt="" height="auto" width="100%">
+                    </div>
+                </div>-->
+                <div class="col-12 col-lg-6 h-100">
+                    <div class="pt-4">
+                        <h1>Lumi Hyväri</h1>
+                        <h2 style="font-size: small; color:var(--highlight-color);">Fullstack Developer | Javascript | C/C++ | C# | NodeJS</h2>
+                        <hr>
+                        <p>
+                            Hi!
+                        </p>
+                        <p>My name is Lumi Hyväri and I am a fullstack developer.</p>
+                        <p>
+                            I specialize in backend development but am able to do frontend. I am proficient in JavaScript, C#, C/C++ and Python. I work with frameworks such as NodeJS and .NET.
+                        </p>
+                        <p>
+                            During my spare time I work with my personal projects such as my home lab, software projects like Mediaflix or Safeheap, electronics experimentation, or maybe I feel like reading into a new random subject.
+                        </p>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col p-1 ps-0">
+                                    <button class="btn w-100" style="background-color: var(--highlight-color);" onclick="location.href='#contact'">Contact</button>
+                                </div>
+                                <div class="col p-1">
+                                    <button class="btn btn-light w-100" onclick="location.href='#projects'">Work</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col p-1 ps-0">
+                                    <button class="btn btn-light w-100" onclick="location.href='#certificates'">Certificates</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="d-flex flex-row justify-content-center">
+            <img src="assets/images/arrow-down.png" height="auto" width="5%" height="auto" alt="" onclick="location.href='#whatido'">
+        </div>
+        <section class="container section-custom-1" id="whatido">
+            <div class="row">
+                <div class="row">
+                    <div class="pt-4">
+                        <h1>What do I do?</h1>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-2 text-white card-custom-1 h-100">
+                            <div class="container">
+                                <h3>Programming</h3>
+                                <hr>
+                                <p>
+                                    Develop using JavaScript, C#, C/C++ and Python.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-2 text-white card-custom-1 h-100">
+                            <div class="container">
+                                <h3>Design</h3>
+                                <hr>
+                                <p>
+                                    Enjoy creating digital design (e.g. logos) using software such as Affinity Design or Adobe Photoshop.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card p-2 text-white card-custom-1 h-100">
+                            <div class="container">
+                                <h3>Frontend</h3>
+                                <hr>
+                                <p>
+                                    Planning, design, prototyping, and implementation of frontend web application design (like this website) using technologies like HTML/CSS and dynamic JavaScript. Lately I have found an interest for Bootstrap ❤️
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card p-2 text-white card-custom-1 h-100">
+                            <div class="container">
+                                <h3>Backend</h3>
+                                <hr>
+                                <p>
+                                    Planning, design, implementation, and deployment of backend systems such as REST APIs and databases using technologies like NodeJS, Postgres, Docker, and Linux systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card p-2 text-white card-custom-1 h-100">
+                            <div class="container">
+                                <h3>Linux</h3>
+                                <hr>
+                                <p>
+                                    Speaking of Linux - I love using Linux and have used it as a daily driver for the past 4+ years. I am capable in configuring, hardening, patching, troubleshooting, and deploying Linux systems on hardware or in virtualization environments or containers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="container section-custom-1" style="background: #050505; background-image: linear-gradient(76deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 94%), url(./assets/images/github-light.webp); background-repeat: no-repeat; background-position: right; background-size: contain;">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="pt-4">
+                            <h1 class="mb-3">Projects</h1>
+                            <p>You can find my projects on github at <a style="color:var(--highlight-color);" href="https://github.com/lumiwyou">@lumiwyou</a>.</p>
+                            <div onclick="window.open('https://github.com/lumiwyou/mediaflix')" class="col card p-2 mt-2 text-white card-custom-1 project">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/mediaflix/main/docs/assets/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="col">
+                                        <h3>Mediaflix</h3>
+                                        <h2 style="font-size: small; color:var(--highlight-color);">2026-in-progress</h2>
+                                        <hr>
+                                        <p>A media streaming service developed using typescript and NodeJS</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div onclick="window.open('https://github.com/lumiwyou/safeheap')" class="col card p-2 mt-2 text-white card-custom-1 project">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/safeheap/main/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="col">
+                                        <h3>Safeheap</h3>
+                                        <h2 style="font-size: small; color:var(--highlight-color);">2024-in-progress</h2>
+                                        <hr>
+                                        <p>A memory security library developed in and meant to be used for C/C++ applications</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div onclick="window.open('https://github.com/lumiwyou/helpviewer-old')" class="col card p-2 mt-2 text-white card-custom-1 project">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/helpviewer-old/v1-final/logo.png); background-size: contain; background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="col">
+                                        <h3>Helpviewer</h3>
+                                        <h2 style="font-size: small; color:var(--highlight-color);">2026</h2>
+                                        <hr>
+                                        <p>
+                                            An application used to read Microsoft Helpviewer files, offering users an easy web user interface.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col card p-2 mt-2 text-white card-custom-1 project project-barred" title="Project was lost due to unrecoverable data loss">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6" style="background-image: url(https://raw.githubusercontent.com/lumiwyou/lumiwyou/refs/heads/main/aivi-old-project.png); background-size: contain; background-repeat: no-repeat;">
+                                    </div>
+                                    <div class="col">
+                                        <h3>AIVI</h3>
+                                        <h2 style="font-size: small; color:var(--highlight-color);">2020-2022-lost</h2>
+                                        <hr>
+                                        <p>A chatbot developed in Python using markovian chain algorithms</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container section-custom-1" id="contact">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="pt-4">
+                            <h1 class="mb-3">Contact</h1>
+                            <div class="col card p-3 mt-2 text-white card-custom-1">
+                                <div>
+                                    <div id="contactOverlay"
+                                        class="contact-overlay d-flex flex-column justify-content-center align-items-center">
+                                        <h3>Form locked</h3>
+                                        <p class="text-center">
+                                            This feature is still under construction.
+                                        </p>
+                                        <p>
+                                            No ETA on feature delivery. However, you can contact me via <a href="email:lumi.hyvari@gmail.com">lumi.hyvari@gmail.com</a> using email.
+                                        </p>
+                                    </div>
+                                    <div class="col card p-3 mt-2 text-white card-custom-1">
+                                        <form>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" placeholder="name@example.com">
+                                            </div>
+                                            <br>
+                                            <div class="form-group">
+                                                <label>Message</label>
+                                                <textarea class="form-control" rows="3" placeholder="Message text"></textarea>
+                                            </div>
+                                            <br>
+                                            <button class="btn w-100" style="background-color: var(--highlight-color);" type="submit">
+                                                Send
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container section-custom-1" id="contact">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="pt-4">
+                            <h1 class="mb-3" id="certificates">Certificates</h1>
+                            <div class="container card p-4 mt-2 text-white card-custom-1">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <embed class="certificate-custom-1" width="50%" height="auto" name="plugin" src="assets/images/isc2.jpg" type="image/png">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <h4>Completed ISC2 Certified in Cybersecurity (CC) Training</h4>
+                                        <h5 style="font-size: small; color:var(--highlight-color);">ISC2</h5>
+                                        <p>
+                                            Issued Apr. 2026 · Expires Apr. 2029
+                                            <br>ID <a href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <embed class="certificate-custom-1" width="50%" height="auto" name="plugin" src="assets/images/hackerrank.png" type="image/png">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <h4>JavaScript (Basic)</h4>
+                                        <h5 style="font-size: small; color:var(--highlight-color);">HackerRank</h5>
+                                        <p>
+                                            Issued May 2026
+                                            <br>ID <a href="https://www.hackerrank.com/certificates/6412a0c94d08">6412a0c94d08</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <embed class="certificate-custom-1" width="50%" height="auto" name="plugin" src="assets/images/hackerrank.png" type="image/png">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <h4>Python (Basic)</h4>
+                                        <h5 style="font-size: small; color:var(--highlight-color);">HackerRank</h5>
+                                        <p>
+                                            Issued May 2026
+                                            <br>ID <a href="https://www.hackerrank.com/certificates/3a630f92fe5b">3a630f92fe5b</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <embed class="certificate-custom-1" width="50%" height="auto" name="plugin" src="assets/images/hackerrank.png" type="image/png">
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <h4>C# (Basic)</h4>
+                                        <h5 style="font-size: small; color:var(--highlight-color);">HackerRank</h5>
+                                        <p>
+                                            Issued May 2026
+                                            <br>ID <a href="https://www.hackerrank.com/certificates/dd13e857cdb4">dd13e857cdb4</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="height:50px; background-color: #0f0f0f; border-top:1px solid #545454;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-center m-2">Copyright (C) Lumi Hyväri</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="d-flex flex-row justify-content-center" style="height: 40px;">
+                    <img 
+                        src="assets/images/github-light.webp" 
+                        alt="GitHub" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://github.com/lumiwyou', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/linkedin-dark.webp" 
+                        alt="LinkedIn" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://www.linkedin.com/in/lumi-hyv%C3%A4ri', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/hackerrank-dark.png" 
+                        alt="HackerRank" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://www.hackerrank.com/profile/lumi_hyvari', '_blank')"
+                    >
+
+                    <img 
+                        src="assets/images/devto-dark.png" 
+                        alt="Dev.to" 
+                        class="m-2 social-icon"
+                        onclick="window.open('https://dev.to/lumiwyou', '_blank')"
+                    >
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
