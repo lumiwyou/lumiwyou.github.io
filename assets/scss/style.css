@@ -58,6 +58,7 @@
 .certificate-custom-1 {
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.2s ease;
+    margin-bottom:1em;
 }
 
 .certificate-custom-1:hover {
