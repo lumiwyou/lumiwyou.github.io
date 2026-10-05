@@ -1,0 +1,146 @@
+:root {
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-column {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+    padding-inline: 1rem;
+    box-sizing: border-box;
+}
+
+.page-header {
+    border-bottom: 1px solid black;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.header-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content > img {
+    height: 48px;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: .2rem;
+
+    .menu-button {
+        border: 0;
+        background-color: lightblue;
+        padding: 1em;
+        border-radius: 20px;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+
+    height: 800px;
+
+    .section-title {
+        background-color: antiquewhite;
+
+        h1 {
+            font-family: "Playwrite CA Guides", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            padding-block: 1em;
+        }
+    }
+}
+
+.section-secondary {
+    background-color: antiquewhite;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    padding-block: 1em;
+    justify-content: center;
+
+    img {
+        width: 250px;
+    }
+
+    .hero-text {
+        padding:1em;
+
+        h2,h3 {
+            margin: 0;
+            margin-bottom: 0.3em;
+        }
+
+        .hero-name {
+            color: inherit;
+            font-size: 30px;
+        }
+        .hero-role {
+            color: #7C4600;
+            font-size: 20px;
+        }
+        .hero-bio {
+            .hello {
+                font-size: 30px;
+                padding: 0.2em;
+                border-radius: 15px;
+                background-color: lightblue;
+            }
+            font-style: italic;
+        }
+        .details {
+            color: gray;
+            font-size: 15px;
+        }
+    }
+}
+
+.catalogue {
+    padding-block: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    overflow-x: scroll;
+    justify-content: center;
+
+    .item-card {
+        padding:1em;
+        background-color: white;
+        button {
+            border: 1px solid black;
+            padding: 1em;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+    }
+}
+
+.page-footer {
+    background-color: lightgray;
+    padding-block: 1em;
+}
+
+@media (width >= 320px) {
+    .hero {
+        img {
+            width: 400px;
+        }
+        .hero-text {
+            padding: 2em;
+        }
+    }
+}
