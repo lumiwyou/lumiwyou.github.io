@@ -15,17 +15,17 @@
         <div class="content-column header-content">
             <img src="img/logo.svg" alt="">
             <nav class="header-menu">
-                <button class="menu-button">About</button>
-                <button class="menu-button">Portfolio</button>
-                <button class="menu-button">Contact</button>
-                <img src="img/linkedin.svg" alt="">
-                <img src="img/github.svg" alt="">
+                <a href="#about"><button class="menu-button">About</button></a>
+                <a href="#portfolio"><button class="menu-button">Portfolio</button></a>
+                <a href="#contact"><button class="menu-button">Contact</button></a>
+                <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"><img src="img/linkedin.svg" alt=""></a>
+                <a href="https://github.com/lumiwyou"><img src="img/github.svg" alt=""></a>
             </nav>
         </div>
     </header>
     <main>
         <section class="section hero-section section-unbounded">
-            <span class="hello" aria-hidden="true">Hello!</span>
+            <span class="hello" aria-hidden="true" hidden="true">Hello!</span>
             <div class="section-title">
                 <div class="content-column">
                     <h1>About me</h1>
@@ -53,13 +53,17 @@
                 </div>
             </div>
         </section>
-        <section class="section section-terdiary" id="">
+        <section class="section section-terdiary" id="biography">
             <div class="section-content">
                 <div class="content-column">
                     <div class="letter">
                         <h2>Biography</h2>
                         <p>
-                            jjerjiooijerojit
+                            🔐 Security Awareness. 💻 Software Development. 📫 Open-mindedness.
+                            <br><br>
+                            I'm proficient in software development using JavaScript, C/C++, and Python. I'm currently studying fullstack development to formalize my prior experience using TypeScript, Bootstrap, Docker, NodeJS, SQL dbs and more. I'm also enthuisiastic about linux systems and their internals and have prior experience. 
+                            <br><br>
+                            In my spare time I research cybersecurity and system inner workings for fun. I have also found a joy for digital design creation using Affinity Design!
                         </p>
                     </div>
                 </div>
@@ -88,7 +92,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-terdiary">
+        <section class="section section-terdiary" id="skillset">
             <div class="section-title">
                 <div class="content-column">
                     <h1>Skillset</h1>
@@ -120,7 +124,7 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section" id="contact">
             <div class="section-title">
                 <div class="content-column">
                     <img src="" alt="">
@@ -139,13 +143,12 @@
                         <label for="email-body">Message</label>
                         <textarea type="text" name="" id="email-body" placeholder="Your message"></textarea>
                         <button type="submit">Send</button>
-                        <h3>Secure Contact</h3>
                         <p>If you need to contact me securely you can use my <a href="keys/pubkey.asc">public key</a>. <span style="font-style: italic;">Prefereably use local encryption/decryption rather than reliance on external services.</span></p>
                     </form>
                 </div>
             </div>
         </section>
-        <section class="section section-secondary section-unbounded">
+        <section class="section section-secondary section-unbounded" id="certificates">
             <div class="section-title">
                 <div class="content-column">
                     <h1>Certificates</h1>
