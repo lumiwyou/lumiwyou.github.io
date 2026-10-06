@@ -149,7 +149,7 @@ button:hover {
 
 .letter {
     background-color: var(--letter-bg);
-    padding: 1em;
+    padding: 2em;
     height:500px;
 }
 
