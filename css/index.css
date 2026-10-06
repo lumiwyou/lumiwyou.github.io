@@ -8,6 +8,7 @@
     --frame-border: #f5f5f7;
     --highlight-color:#7C4600;
     --card-bg: white;
+    --header-bg: white;
 }
 
 body {
@@ -35,7 +36,11 @@ button:hover {
 }
 
 .page-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     border-bottom: 1px solid var(--page-border);
+    background-color: var(--header-bg);
     height: 80px;
     width: 100%;
     box-sizing: border-box;
