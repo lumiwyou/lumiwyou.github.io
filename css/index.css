@@ -293,8 +293,10 @@ button:hover {
     .header-menu {
         img {
             display: none;
+            visibility: hidden;
         }
     }
+
     .hero {
         flex-direction: column;
         align-items: center;
