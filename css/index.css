@@ -11,6 +11,10 @@
     --header-bg: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Varta", sans-serif;
