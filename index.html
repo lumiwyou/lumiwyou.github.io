@@ -24,7 +24,7 @@
         </div>
     </header>
     <main>
-        <section class="section hero-section">
+        <section class="section hero-section section-unbounded">
             <span class="hello" aria-hidden="true">Hello!</span>
             <div class="section-title">
                 <div class="content-column">
@@ -44,7 +44,7 @@
                             <p class="details">
                                 Chas Academy | Stockholm
                             </p>
-                            <div class="buttons-inline">
+                            <div class="hero-buttons">
                                 <a href="#portfolio"><button>See portfolio</button></a>
                                 <a href="#contact"><button>Contact me</button></a>
                             </div>
@@ -53,7 +53,19 @@
                 </div>
             </div>
         </section>
-        <section class="section section-secondary" id="portfolio">
+        <section class="section section-terdiary" id="">
+            <div class="section-content">
+                <div class="content-column">
+                    <div class="letter">
+                        <h2>Biography</h2>
+                        <p>
+                            jjerjiooijerojit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-secondary section-unbounded" id="portfolio">
             <div class="section-title">
                 <div class="content-column">
                     <h1>Portfolio</h1>
@@ -63,22 +75,14 @@
                 <div class="content-column">
                     <div class="catalogue">
                         <div class="item-card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt-MCg4EF8rKHQ8I3Tl_kyFfVpg4umS07yjbYIsOowRnCCGxB6R7fsoln&s=10" alt="">
                             <h3>Safeheap</h3>
-                            <p>Memory vulnerability mitigation</p>
-                            <button>Explore</button>
+                            <p>C/C++ Memory vulnerability mitigation library</p>
+                            <a href=""><button>Explore</button></a>
                         </div>
                         <div class="item-card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt-MCg4EF8rKHQ8I3Tl_kyFfVpg4umS07yjbYIsOowRnCCGxB6R7fsoln&s=10" alt="">
-                            <h3>Safeheap</h3>
-                            <p>Memory vulnerability mitigation</p>
-                            <button>Explore</button>
-                        </div>
-                        <div class="item-card">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNt-MCg4EF8rKHQ8I3Tl_kyFfVpg4umS07yjbYIsOowRnCCGxB6R7fsoln&s=10" alt="">
-                            <h3>Safeheap</h3>
-                            <p>Memory vulnerability mitigation</p>
-                            <button>Explore</button>
+                            <h3>Helpviewer</h3>
+                            <p>Microsoft Helpviewer Documentation Offline Reader</p>
+                            <a href="https://github.com/lumiwyou/helpviewer-old"><button>Explore</button></a>
                         </div>
                     </div>
                 </div>
@@ -92,17 +96,34 @@
             </div>
             <div class="section-content">
                 <div class="content-column">
-                    <h2>Programming</h2>
+                    <h2>Backend</h2>
                     <hr>
-                    <li>
-                        <ul>Test</ul>
-                    </li>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Typescript</li>
+                        <li>MySQL</li>
+                        <li>Docker</li>
+                        <li>Express</li>
+                    </ul>
+                    <h2>Frontend</h2>
+                    <hr>
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>HTML5/CSS5</li>
+                        <li>QT5</li>
+                    </ul>
+                    <h2>Misc.</h2>
+                    <hr>
+                    <ul>
+                        <li>Digital design</li>
+                    </ul>
                 </div>
             </div>
         </section>
         <section class="section">
             <div class="section-title">
                 <div class="content-column">
+                    <img src="" alt="">
                     <h1>Contact</h1>
                 </div>
             </div>
@@ -116,8 +137,10 @@
                             <input type="text" id="email" placeholder="example@hello.net">
                         </div>
                         <label for="email-body">Message</label>
-                        <textarea type="text" name="" id="email-body"></textarea>
+                        <textarea type="text" name="" id="email-body" placeholder="Your message"></textarea>
                         <button type="submit">Send</button>
+                        <h3>Secure Contact</h3>
+                        <p>If you need to contact me securely you can use my <a href="keys/pubkey.asc">public key</a>. <span style="font-style: italic;">Prefereably use local encryption/decryption rather than reliance on external services.</span></p>
                     </form>
                 </div>
             </div>
@@ -131,15 +154,6 @@
             <div class="section-content">
                 <div class="content-column">
                     <div class="certificate-frames">
-                        <div class="frame">
-                            <img src="img/isc2.svg" alt="">
-                            <div class="text">
-                                <h3 class="title">Completed ISC2 Certified in Cybersecurity (CC) Training</h3>
-                                <p class="issuer">ISC2</p>
-                                <p class="expiration">Issued Apr. 2026 · Expires Apr. 2029</p>
-                                <a href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
-                            </div>
-                        </div>
                         <div class="frame">
                             <img src="img/isc2.svg" alt="">
                             <div class="text">

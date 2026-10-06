@@ -1,4 +1,5 @@
 :root {
+    --input-borders: #b7b7b7;
 }
 
 body {
@@ -92,17 +93,44 @@ button:hover {
 .contact-form {
     display: flex;
     flex-direction: column;
+    font-family: inherit;
     .input-field {
         display: flex;
         flex-direction: row;
         gap: 1em;
+        margin-bottom: 1em;
+    }
+    label, button {
+        font-weight: bold;
     }
     textarea {
         height: 200px;
+        border:1px solid var(--input-borders);
+    }
+    input {
+        border:1px solid var(--input-borders);
     }
     button {
         margin-top: 1em;
     }
+
+    h3 {
+        font-size: 15px;
+        margin-bottom:0;
+    }
+    p {
+        margin-bottom:0;
+    }
+}
+
+.text-container {
+    padding: 1em;
+}
+
+.letter {
+    background-color: #f5f5f7;
+    padding: 1em;
+    height:500px;
 }
 
 .certificate-frames {
@@ -160,6 +188,8 @@ button:hover {
         position: relative;
         z-index: 1;
     }
+
+    padding-bottom:1.5em;
 }
 
 .hero {
@@ -202,9 +232,8 @@ button:hover {
 .catalogue {
     padding-block: 2em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1em;
-    overflow-x: scroll;
     justify-content: center;
 
     .item-card {
@@ -266,5 +295,14 @@ button:hover {
             width: 300px;
             height:auto;
         }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+    }
+    img {
+        filter: invert(100%);
     }
 }
