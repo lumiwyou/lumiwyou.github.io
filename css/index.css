@@ -37,6 +37,7 @@ button:hover {
 .page-header {
     border-bottom: 1px solid var(--page-border);
     height: 80px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -152,7 +153,7 @@ button:hover {
         border-bottom: 1px solid var(--frame-border);
         padding: 1em;
         img {
-            width: 400px;
+            width: 100%;
         }
         .text {
             .issuer {
@@ -289,7 +290,7 @@ button:hover {
     }
 }
 
-@media (width <= 320px) {
+@media (width <= 480px) {
     .header-menu {
         img {
             display: none;
@@ -314,9 +315,6 @@ button:hover {
         .frame {
             border-bottom: 1px solid var(--frame-border);
             padding: 1em;
-            img {
-                width: 100px;
-            }
         }
     }
 
