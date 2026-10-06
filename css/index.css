@@ -312,14 +312,14 @@ button:hover {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
     body {
         background-color: black;
     }
     img {
         filter: invert(100%);
     }
-}
+}*/
 
 @media (width <= 656px) {
     .hero {
