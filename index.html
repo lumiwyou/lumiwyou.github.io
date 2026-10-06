@@ -135,13 +135,13 @@
                 <div class="content-column">
                     <h2>Send me an email</h2>
                     <p>Enter your email address and the message and press Send</p>
-                    <form action="" class="contact-form">
+                    <form action="https://formspree.io/f/xnpjjpnq" method="POST" class="contact-form">
                         <div class="input-field">
                             <label for="email">Email</label>
-                            <input type="text" id="email" placeholder="example@hello.net">
+                            <input type="email" name="email" placeholder="example@hello.net">
                         </div>
                         <label for="email-body">Message</label>
-                        <textarea type="text" name="" id="email-body" placeholder="Your message"></textarea>
+                        <textarea name="message" placeholder="Enter your message"></textarea>
                         <button type="submit">Send</button>
                         <p>If you need to contact me securely you can use my <a href="keys/pubkey.asc">public key</a>. <span style="font-style: italic;">Prefereably use local encryption/decryption rather than reliance on external services.</span></p>
                     </form>
