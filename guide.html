@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete GPG Guide: Installation, Keys, and Secure Transactions</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --code-bg: #090d16;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p, li {
+            color: #cbd5e1;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            color: #38bdf8;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.95em;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: #38bdf8;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid var(--border-color);
+            font-family: monospace;
+        }
+
+        .step-box {
+            background: rgba(15, 23, 42, 0.6);
+            border-left: 4px solid var(--accent-color);
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 6px 6px 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 30px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>GPG Master Guide</h1>
+    <p>A step-by-step framework for Windows, Mac, and Linux users on how to install, manage keys, and execute secure cryptographic transactions.</p>
+
+    <hr>
+
+    <h2>1. Installation Across Platforms</h2>
+    <p>Depending on your operating system, setup your environment using the appropriate method:</p>
+    <ul>
+        <li><strong>Windows:</strong> Download and run the official installer from <strong>Gpg4win.org</strong> (bundles Kleopatra GUI and command-line utilities).</li>
+        <li><strong>macOS:</strong> Open your Terminal and install via Homebrew using <code>brew install gnupg</code>.</li>
+        <li><strong>Linux:</strong> Utilize your native package manager (e.g., <code>sudo apt install gnupg</code> for Ubuntu/Debian or <code>sudo dnf install gnupg</code> for Fedora).</li>
+    </ul>
+
+    <h2>2. Generating Your Key Pair</h2>
+    <p>Open your command line interface and execute the key generation wizard:</p>
+    <pre><code>gpg --full-generate-key</code></pre>
+    <div class="step-box">
+        <ul>
+            <li>Select option <strong>1</strong> (RSA and RSA).</li>
+            <li>Choose a robust key length of <strong>4096 bits</strong>.</li>
+            <li>Set an expiration date (e.g., 1 or 2 years) for forward security hygiene.</li>
+            <li>Input your <strong>Real Name</strong>, <strong>Email Address</strong>, and a secure <strong>passphrase</strong>.</li>
+        </ul>
+    </div>
+
+    <h2>3. Key Exchange Etiquette & Verification</h2>
+    <p>Before executing secure messaging transactions, safety requires verifying identities properly.</p>
+    <ul>
+        <li><strong>Export Public Key:</strong> Run <code>gpg --armor --export your_email@example.com > my_pubkey.asc</code> and transmit the text file to your partner.</li>
+        <li><strong>Import Partner Key:</strong> Import received keys locally via <code>gpg --import partner_pubkey.asc</code>.</li>
+        <li><strong>Verify Fingerprints (Crucial):</strong> Never trust raw downloads blindly. Cross-check the cryptographic fingerprint out-of-band via phone or separate secure channel:
+            <pre><code>gpg --fingerprint partner@example.com</code></pre>
+        </li>
+        <li><strong>Sign the Key:</strong> Once verified, establish web-of-trust validation by signing their key:
+            <pre><code>gpg --sign-key partner@example.com</code></pre>
+        </li>
+    </ul>
+
+    <h2>4. Encrypting and Decrypting a Transaction</h2>
+    <p>With keys successfully shared and verified, you can now process secure transaction flows.</p>
+    <ul>
+        <li><strong>Encrypting Data:</strong> Create a plaintext document named <code>transaction.txt</code>, then encrypt it targeted to your partner's identity:
+            <pre><code>gpg --encrypt --recipient partner@example.com transaction.txt</code></pre>
+            This outputs a secure ciphertext file <code>transaction.txt.gpg</code> ready for transit.
+        </li>
+        <li><strong>Decrypting Data:</strong> Upon receiving an incoming <code>.gpg</code> file, decode it using your private key:
+            <pre><code>gpg --decrypt transaction.txt.gpg > decrypted_transaction.txt</code></pre>
+            Enter your secret passphrase when prompted to safely unveil the plaintext.
+        </li>
+    </ul>
+
+    <div class="footer">
+        <p>GPG Security Protocol &bull; Keep your private keys offline and secure.</p>
+    </div>
+</div>
+
+</body>
+</html>
