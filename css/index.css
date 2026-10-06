@@ -1,10 +1,20 @@
 :root {
-
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Varta", sans-serif;
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    background-color: #e9e9ed;
+    font-family: inherit;
+}
+button:hover {
+    padding: calc(1rem - 1px);
+    border: 1px solid#7C4600;
 }
 
 .content-column {
@@ -15,7 +25,7 @@ body {
 }
 
 .page-header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
     height: 80px;
     box-sizing: border-box;
 }
@@ -28,7 +38,7 @@ body {
 }
 
 .header-content > img {
-    height: 48px;
+    height: 80px;
 }
 
 .header-menu {
@@ -38,9 +48,17 @@ body {
 
     .menu-button {
         border: 0;
-        background-color: lightblue;
         padding: 1em;
-        border-radius: 20px;
+        background: none;
+        /*border-radius: 30px;*/
+    }
+    .menu-button:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        height: 35px;
+        padding: .5em;
     }
 }
 
@@ -61,10 +79,87 @@ body {
             padding-block: 1em;
         }
     }
+
+    hr {
+        color: inherit;
+    }
+}
+
+.section-unbounded {
+    height: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    .input-field {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+    textarea {
+        height: 200px;
+    }
+    button {
+        margin-top: 1em;
+    }
+}
+
+.certificate-frames {
+    .frame {
+        border-bottom: 1px solid lightgray;
+        padding: 1em;
+        img {
+            width: 400px;
+        }
+        .text {
+            .issuer {
+                color:#7C4600;
+                font-weight: bold;
+            }
+            .expiration {
+                font-style: italic;
+            }
+        }
+    }
 }
 
 .section-secondary {
     background-color: antiquewhite;
+}
+
+.section-terdiary {
+    background-color: white;
+    color: black;
+
+    .section-title {
+        background-color: inherit;
+    }
+}
+
+.hero-section {
+    position: relative;
+    overflow: hidden;
+
+    .hello {
+        position: absolute;
+        top: 90px;
+        right: max(1rem, calc((100vw - 1100px) / 2));
+        z-index: 0;
+        color: black;
+        opacity: 0.08;
+        font-size: clamp(5rem, 14vw, 12rem);
+        font-weight: 700;
+        line-height: 1;
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .section-content {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .hero {
@@ -74,7 +169,8 @@ body {
     justify-content: center;
 
     img {
-        width: 250px;
+        width: 450px;
+        height: auto;
     }
 
     .hero-text {
@@ -94,12 +190,6 @@ body {
             font-size: 20px;
         }
         .hero-bio {
-            .hello {
-                font-size: 30px;
-                padding: 0.2em;
-                border-radius: 15px;
-                background-color: lightblue;
-            }
             font-style: italic;
         }
         .details {
@@ -120,18 +210,13 @@ body {
     .item-card {
         padding:1em;
         background-color: white;
-        button {
-            border: 1px solid black;
-            padding: 1em;
-            background-color: aliceblue;
-            border-radius: 10px;
-        }
     }
 }
 
 .page-footer {
-    background-color: lightgray;
+    background-color: white;
     padding-block: 1em;
+    border-top: 1px solid lightgray;
 }
 
 @media (width >= 320px) {
@@ -141,6 +226,45 @@ body {
         }
         .hero-text {
             padding: 2em;
+        }
+    }
+}
+
+@media (width <= 320px) {
+    .header-menu {
+        img {
+            display: none;
+        }
+    }
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 250px;
+        }
+    }
+    .hero-section {
+        .hello {
+            display: none;
+        }
+    }
+
+    .certificate-frames {
+        .frame {
+            border-bottom: 1px solid lightgray;
+            padding: 1em;
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media (width <= 703px) {
+    .hero {
+        img {
+            width: 300px;
+            height:auto;
         }
     }
 }

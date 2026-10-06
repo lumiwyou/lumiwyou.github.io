@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA+Guides&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varta:wght@300..700&display=swap" rel="stylesheet">
     <title>Lumi's Portfolio</title>
 </head>
 <body>
@@ -14,13 +15,17 @@
         <div class="content-column header-content">
             <img src="img/logo.svg" alt="">
             <nav class="header-menu">
-                <button class="menu-button">About me</button>
-                <button class="menu-button">Projects</button>
+                <button class="menu-button">About</button>
+                <button class="menu-button">Portfolio</button>
+                <button class="menu-button">Contact</button>
+                <img src="img/linkedin.svg" alt="">
+                <img src="img/github.svg" alt="">
             </nav>
         </div>
     </header>
     <main>
-        <section class="section">
+        <section class="section hero-section">
+            <span class="hello" aria-hidden="true">Hello!</span>
             <div class="section-title">
                 <div class="content-column">
                     <h1>About me</h1>
@@ -29,27 +34,29 @@
             <div class="section-content">
                 <div class="content-column">
                     <div class="hero">
-                        <img src="img/me.jpeg" alt="Me">
+                        <img src="img/me.png" alt="Me">
                         <div class="hero-text">
                             <h2 class="hero-name">Lumi Hyväri</h2>
                             <h3 class="hero-role">JavaScript Fullstack Engineer</h3>
                             <p class="hero-bio">
-                                <span class="hello">Hello!</span><br>
-                                <br>
-                                The name is Lumi and I am a Fullstack Engineer currently studying @ Chas Academy in Stockholm!
+                                The name is Lumi and I am a Javascript Fullstack Engineer currently studying @ Chas Academy in Stockholm!
                             </p>
                             <p class="details">
                                 Chas Academy | Stockholm
                             </p>
+                            <div class="buttons-inline">
+                                <a href="#portfolio"><button>See portfolio</button></a>
+                                <a href="#contact"><button>Contact me</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section section-secondary">
+        <section class="section section-secondary" id="portfolio">
             <div class="section-title">
                 <div class="content-column">
-                    <h1>My work</h1>
+                    <h1>Portfolio</h1>
                 </div>
             </div>
             <div class="section-content">
@@ -72,6 +79,75 @@
                             <h3>Safeheap</h3>
                             <p>Memory vulnerability mitigation</p>
                             <button>Explore</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-terdiary">
+            <div class="section-title">
+                <div class="content-column">
+                    <h1>Skillset</h1>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="content-column">
+                    <h2>Programming</h2>
+                    <hr>
+                    <li>
+                        <ul>Test</ul>
+                    </li>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="section-title">
+                <div class="content-column">
+                    <h1>Contact</h1>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="content-column">
+                    <h2>Send me an email</h2>
+                    <p>Enter your email address and the message and press Send</p>
+                    <form action="" class="contact-form">
+                        <div class="input-field">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="example@hello.net">
+                        </div>
+                        <label for="email-body">Message</label>
+                        <textarea type="text" name="" id="email-body"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section section-secondary section-unbounded">
+            <div class="section-title">
+                <div class="content-column">
+                    <h1>Certificates</h1>
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="content-column">
+                    <div class="certificate-frames">
+                        <div class="frame">
+                            <img src="img/isc2.svg" alt="">
+                            <div class="text">
+                                <h3 class="title">Completed ISC2 Certified in Cybersecurity (CC) Training</h3>
+                                <p class="issuer">ISC2</p>
+                                <p class="expiration">Issued Apr. 2026 · Expires Apr. 2029</p>
+                                <a href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
+                            </div>
+                        </div>
+                        <div class="frame">
+                            <img src="img/isc2.svg" alt="">
+                            <div class="text">
+                                <h3 class="title">Completed ISC2 Certified in Cybersecurity (CC) Training</h3>
+                                <p class="issuer">ISC2</p>
+                                <p class="expiration">Issued Apr. 2026 · Expires Apr. 2029</p>
+                                <a href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
+                            </div>
                         </div>
                     </div>
                 </div>
