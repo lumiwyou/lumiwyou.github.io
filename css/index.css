@@ -295,6 +295,8 @@ button:hover {
 
 @media (width <= 320px) {
     .hero {
+        flex-direction: column;
+        align-items: center;
         img {
             width: 400px;
         }
@@ -323,7 +325,6 @@ button:hover {
 
     .hero {
         flex-direction: column;
-        align-items: center;
         img {
             width: 250px;
         }
@@ -379,7 +380,7 @@ button:hover {
 @media (width <= 656px) {
     .hero {
         flex-direction: column;
-        align-items: center;
+
         img {
             width: 300px;
         }
