@@ -90,8 +90,7 @@ button:hover {
 .section {
     display: flex;
     flex-direction: column;
-
-    height: 800px;
+    padding-bottom:2em;
 
     .section-title {
         background-color: var(--color-alpha);
@@ -157,7 +156,6 @@ button:hover {
 .letter {
     background-color: var(--letter-bg);
     padding: 2em;
-    height:500px;
 }
 
 .certificate-frames {
