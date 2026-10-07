@@ -118,12 +118,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     font-family: inherit;
-    .input-field {
-        display: flex;
-        flex-direction: row;
-        gap: 1em;
-        margin-bottom: 1em;
-    }
+    gap: .5em;
     label, button {
         font-weight: bold;
     }
