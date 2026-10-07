@@ -85,24 +85,6 @@ button:hover {
         height: 35px;
         padding: .5em;
     }
-    
-    .resume-header-container {
-        background-color: rgb(246, 246, 246);
-        padding:.5em;
-        height:30px;
-        a {
-            display: flex;
-            flex-direction: row;
-            gap:5px;
-            text-decoration: none;
-            color: inherit;
-            align-items: center;
-            justify-content: center;
-            img {
-                height:30px;
-            }
-        }
-    }
 }
 
 .section {
@@ -392,17 +374,7 @@ button:hover {
                 display: inline-block;
                 width: 40px;
             }
-
-            .resume-button {
-                visibility: hidden;
-                display: none;
-            }
         }
-    }
-
-    .resume-button-mobile {
-        visibility: visible;
-        display: block;
     }
 }
 
@@ -425,12 +397,6 @@ button:hover {
 }*/
 
 @media (width <= 656px) {
-    .header-menu {
-        .resume-header-container {
-            visibility: hidden;
-            display: none;
-        }
-    }
     .hero {
         flex-direction: column;
         align-items: center;
