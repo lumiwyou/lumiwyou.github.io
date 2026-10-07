@@ -1,14 +1,12 @@
 :root {
     --button-bg: #e9e9ed;
-    --button-br-active: #7C4600;
+    --highlight-color: #7C4600;
     --input-borders: #b7b7b7;
     --page-border:#d3d3d3;
     --color-alpha:#faebd7;
     --letter-bg:#f5f5f7;
     --frame-border: #f5f5f7;
-    --highlight-color:#7C4600;
-    --card-bg: white;
-    --header-bg: white;
+    --surface-bg: #fff;
 }
 
 .disabled-feature {
@@ -34,7 +32,7 @@ button {
 }
 button:hover {
     padding: calc(1rem - 1px);
-    border: 1px solid var(--button-br-active);
+    border: 1px solid var(--highlight-color);
 }
 
 .content-column {
@@ -49,7 +47,7 @@ button:hover {
     top: 0;
     z-index: 2;
     border-bottom: 1px solid var(--page-border);
-    background-color: var(--header-bg);
+    background-color: var(--surface-bg);
     height: 80px;
     width: 100%;
     box-sizing: border-box;
@@ -98,8 +96,6 @@ button:hover {
     padding-bottom:2em;
 
     .section-title {
-        background-color: var(--color-alpha);
-
         h1 {
             font-family: "Playwrite CA Guides", cursive;
             font-weight: 400;
@@ -112,6 +108,11 @@ button:hover {
     hr {
         color: inherit;
     }
+}
+
+.section .section-title,
+.section-secondary {
+    background-color: var(--color-alpha);
 }
 
 .section-unbounded {
@@ -150,7 +151,7 @@ button:hover {
     }
     .form-legal {
         font-style: italic;
-        color: #555555;
+        color: #555;
     }
 }
 
@@ -166,8 +167,6 @@ button:hover {
 .certificate-frames {
     .frame {
         border: 1px solid gray;
-        background-color: var(--card-bg);
-        padding: 1em;
         margin-bottom:1em;
         display: flex;
         flex-direction: row;
@@ -198,13 +197,15 @@ button:hover {
     }
 }
 
-.section-secondary {
-    background-color: var(--color-alpha);
+.certificate-frames .frame,
+.catalogue .item-card {
+    background-color: var(--surface-bg);
+    padding: 1em;
 }
 
 .section-terdiary {
-    background-color: white;
-    color: black;
+    background-color: var(--surface-bg);
+    color: #000;
 
     .section-title {
         background-color: inherit;
@@ -220,8 +221,8 @@ button:hover {
         top: 90px;
         right: max(1rem, calc((100vw - 1100px) / 2));
         z-index: 0;
-        color: black;
-        opacity: 0.08;
+        color: #000;
+        opacity: .08;
         font-size: clamp(5rem, 14vw, 12rem);
         font-weight: 700;
         line-height: 1;
@@ -254,7 +255,7 @@ button:hover {
 
         h2,h3 {
             margin: 0;
-            margin-bottom: 0.3em;
+            margin-bottom: .3em;
         }
 
         .hero-name {
@@ -269,7 +270,7 @@ button:hover {
             font-style: italic;
         }
         .details {
-            color: #555555;
+            color: #555;
             font-size: 15px;
         }
     }
@@ -299,15 +300,10 @@ button:hover {
     flex-direction: column;
     gap: 1em;
     justify-content: center;
-
-    .item-card {
-        padding:1em;
-        background-color: var(--card-bg);
-    }
 }
 
 .page-footer {
-    background-color: white;
+    background-color: var(--surface-bg);
     padding-block: 1em;
     border-top: 1px solid var(--page-border);
 }
@@ -355,7 +351,6 @@ button:hover {
 
     .certificate-frames {
         .frame {
-            padding: 1em;
             .img-container {
                 img {
                     width: 100%;
@@ -394,7 +389,7 @@ button:hover {
 
 /*@media (prefers-color-scheme: dark) {
     body {
-        background-color: black;
+        background-color: #000;
     }
     img {
         filter: invert(100%);
