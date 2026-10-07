@@ -81,7 +81,7 @@ button:hover {
         height:calc(50px - 4px);
     }
 
-    img {
+    .social {
         height: 35px;
         padding: .5em;
     }
@@ -239,7 +239,7 @@ button:hover {
     padding-block: 1em;
     justify-content: center;
 
-    img {
+    .me img {
         width: 450px;
         height: auto;
     }
@@ -274,6 +274,8 @@ button:hover {
     display: flex;
     flex-direction: row;
     a {
+        color: inherit;
+        text-decoration: none;
         button {
             margin-right:1em;
         }
@@ -316,6 +318,15 @@ button:hover {
     }
 }
 
+@media (width <= 620px) {
+    .certificate-frames {
+        .frame {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
 @media (width <= 480px) {
     .header-menu {
         img {
@@ -339,7 +350,6 @@ button:hover {
 
     .certificate-frames {
         .frame {
-            border-bottom: 1px solid var(--frame-border);
             padding: 1em;
             .img-container {
                 img {
@@ -350,11 +360,17 @@ button:hover {
     }
 
     .hero-buttons {
+        align-items: center;
+        height: 100px;
+
         a {
+            display: inline-flex;
+            align-items: center;
+
             button {
                 display: inline-block;
             }
-            img {
+            .social {
                 display: inline-block;
                 width: 40px;
             }
