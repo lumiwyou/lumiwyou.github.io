@@ -11,6 +11,11 @@
     --header-bg: white;
 }
 
+.disabled-feature {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
