@@ -239,7 +239,7 @@ button:hover {
     padding-block: 1em;
     justify-content: center;
 
-    .me img {
+    img {
         width: 450px;
         height: auto;
     }
