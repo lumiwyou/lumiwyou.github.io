@@ -165,9 +165,17 @@ button:hover {
         margin-bottom:1em;
         display: flex;
         flex-direction: row;
-        img {
-            align-self: center;
-            width: 50%;
+        .img-container {
+            width:50%;
+            text-align: center;
+            img {
+                align-self: center;
+                width: 70%;
+            }
+            p {
+                margin-top:1em;
+                font-size: 10px;
+            }
         }
         .text {
             p {
@@ -332,8 +340,10 @@ button:hover {
         .frame {
             border-bottom: 1px solid var(--frame-border);
             padding: 1em;
-            img {
-                width: 100%;
+            .img-container {
+                img {
+                    width: 100%;
+                }
             }
         }
     }
