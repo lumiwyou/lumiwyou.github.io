@@ -130,6 +130,9 @@ button:hover {
     input {
         border:1px solid var(--input-borders);
     }
+    textarea, input {
+        padding:.5em;
+    }
     button {
         margin-top: 1em;
     }
