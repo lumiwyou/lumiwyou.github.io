@@ -11,6 +11,11 @@
     --header-bg: white;
 }
 
+.disabled-feature {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -145,7 +150,7 @@ button:hover {
     }
     .form-legal {
         font-style: italic;
-        color: gray;
+        color: #555555;
     }
 }
 
@@ -264,7 +269,7 @@ button:hover {
             font-style: italic;
         }
         .details {
-            color: gray;
+            color: #555555;
             font-size: 15px;
         }
     }
