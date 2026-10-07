@@ -130,6 +130,7 @@ button:hover {
     textarea {
         height: 200px;
         border:1px solid var(--input-borders);
+        resize: none;
     }
     input {
         border:1px solid var(--input-borders);
