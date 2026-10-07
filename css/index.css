@@ -216,21 +216,6 @@ button:hover {
     position: relative;
     overflow: hidden;
 
-    .hello {
-        position: absolute;
-        top: 90px;
-        right: max(1rem, calc((100vw - 1100px) / 2));
-        z-index: 0;
-        color: #000;
-        opacity: .08;
-        font-size: clamp(5rem, 14vw, 12rem);
-        font-weight: 700;
-        line-height: 1;
-        white-space: nowrap;
-        pointer-events: none;
-        user-select: none;
-    }
-
     .section-content {
         position: relative;
         z-index: 1;
@@ -341,11 +326,6 @@ button:hover {
         align-items: center;
         img {
             width: 250px;
-        }
-    }
-    .hero-section {
-        .hello {
-            display: none;
         }
     }
 
