@@ -110,6 +110,11 @@ button:hover {
     }
 }
 
+.header-text-image {
+    width: 120px;
+    text-align: left;
+}
+
 .section .section-title,
 .section-secondary {
     background-color: var(--color-alpha);
