@@ -49,28 +49,51 @@
                 <img class="logo" src="img/logo.svg"
                     alt="Lumi's Portfolio Logo">
                 <nav class="header-menu">
-                    <a href="#about"><button
+                    <a href="#about" aria-label="About"><button
                             class="menu-button">About</button></a>
-                    <a href="#portfolio"><button
+                    <a href="#portfolio" aria-label="Portfolio"><button
                             class="menu-button">Portfolio</button></a>
-                    <a href="#contact"><button
+                    <a href="#contact" aria-label="Contact"><button
                             class="menu-button">Contact</button></a>
+                    <a href="#resume" aria-label="Resume"><button
+                            class="menu-button"><img
+                                src="img/pdf.svg" alt>Resume</button></a>
                     <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
                         aria-label="Link to my LinkedIn"><img class="social"
                             src="img/linkedin.svg" alt="LinkedIn"></a>
                     <a href="https://github.com/lumiwyou"
                         aria-label="Link to my Github"><img class="social"
                             src="img/github.svg" alt="Github"></a>
-                    <div class="resume-header-container disabled-feature">
-                        <a href="doc/resume.pdf" aria-label="Link to my resume">
-                            <span>For recruiters</span>
-                            <img src="img/doc.svg"
-                                alt="Resume file for recruiters - click to see">
-                        </a>
-                    </div>
                 </nav>
+                <button class="dropdown-btn">Menu</button>
             </div>
         </header>
+        <aside class="dropdown-content">
+            <nav class="menu">
+                <a href="#about" aria-label="About"><button
+                        class="menu-btn">About</button></a>
+                <a href="#portfolio" aria-label="Portfolio"><button
+                        class="menu-btn">Portfolio</button></a>
+                <a href="#contact" aria-label="Contact"><button
+                        class="menu-btn">Contact</button></a>
+                <a href="#resume" aria-label="Resume"><button
+                        class="menu-btn"><img
+                            src="img/pdf.svg" alt>Resume</button></a>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                        aria-label="Link to my LinkedIn"><img class="social-btn"
+                            src="img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/lumiwyou"
+                        aria-label="Link to my Github"><img class="social-btn"
+                            src="img/github.svg" alt="Github"></a>
+                </div>
+            </nav>
+            <footer class="page-footer">
+                <div class="content-column">
+                    <p>Copyright &copy; Lumi Hyväri</p>
+                </div>
+            </footer>
+        </aside>
         <main>
             <section class="section hero-section" id="about">
                 <div class="section-title">
@@ -95,29 +118,31 @@
                                     Chas Academy | Stockholm
                                 </p>
                                 <div class="hero-buttons">
-                                    <a
-                                        href="#portfolio"><button>Portfolio</button></a>
-                                    <a
-                                        href="#contact"><button>Contact</button></a>
-                                    <a
-                                        href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
-                                        aria-label="Link to my LinkedIn"><img
-                                            class="social"
-                                            src="img/linkedin.svg"
-                                            alt="LinkedIn"></a>
-                                    <a href="https://github.com/lumiwyou"
-                                        aria-label="Link to my Github"><img
-                                            class="social" src="img/github.svg"
-                                            alt="Github"></a>
-                                    <a href="doc/resume.pdf"
-                                        aria-label="Link to my resume"><button
-                                            class="resume-button disabled-feature">Resume
-                                            (PDF)</button></a>
+                                    <div class="hero-primary-buttons">
+                                        <a href="#portfolio"
+                                            aria-label="Portfolio"><button>Portfolio</button></a>
+                                        <a href="#contact"
+                                            aria-label="Contact"><button>Contact</button></a>
+                                        <a
+                                            href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                                            aria-label="Link to my LinkedIn"><img
+                                                class="social"
+                                                src="img/linkedin.svg"
+                                                alt="LinkedIn"></a>
+                                        <a href="https://github.com/lumiwyou"
+                                            aria-label="Link to my Github"><img
+                                                class="social"
+                                                src="img/github.svg"
+                                                alt="Github"></a>
+                                    </div>
+                                    <div class="hero-secondary-buttons">
+                                        <a href="#resume"
+                                            aria-label="Resume"><button
+                                                class="menu-button"><img
+                                                    src="img/pdf.svg"
+                                                    alt="PDF-file">Resume</button></a>
+                                    </div>
                                 </div>
-                                <a href="doc/resume.pdf"
-                                    aria-label="Link to my resume"><button
-                                        class="resume-button-mobile disabled-feature"
-                                        hidden="true">Resume (PDF)</button></a>
                             </div>
                         </div>
                     </div>
