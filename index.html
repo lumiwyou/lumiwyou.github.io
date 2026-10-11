@@ -1,214 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lumi Hyväri is a JavaScript Fullstack Engineer based in Stockholm, specializing in software development, cybersecurity, Linux, and modern web technologies.">
-    <meta name="keywords" content="Lumi Hyväri, JavaScript Fullstack Engineer, Stockholm, software developer, web developer, cybersecurity, Linux, frontend, backend, portfolio">
-    <meta name="author" content="Lumi Hyväri">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0f172a">
-    <link rel="canonical" href="https://lumiwyou.github.io/">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CA+Guides&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varta:wght@300..700&display=swap" rel="stylesheet">
-    <meta property="og:title" content="Lumi Hyväri | JavaScript Fullstack Engineer">
-    <meta property="og:description" content="Portfolio and contact page for Lumi Hyväri, a JavaScript Fullstack Engineer in Stockholm specializing in software development, cybersecurity, and Linux systems.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://lumiwyou.github.io/">
-    <meta property="og:site_name" content="Lumi Hyväri">
-    <meta property="og:image" content="https://lumiwyou.github.io/img/seo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Lumi Hyväri portfolio preview image">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Lumi Hyväri | JavaScript Fullstack Engineer">
-    <meta name="twitter:description" content="Portfolio and contact page for Lumi Hyväri, a JavaScript Fullstack Engineer in Stockholm specializing in software development, cybersecurity, and Linux systems.">
-    <meta name="twitter:image" content="https://lumiwyou.github.io/img/seo.png">
-    <title>Lumi Hyväri's Portfolio</title>
-</head>
-<body>
-    <header class="page-header">
-        <div class="content-column header-content">
-            <img class="logo" src="img/logo.svg" alt="Lumi's Portfolio Logo">
-            <nav class="header-menu">
-                <a href="#about"><button class="menu-button">About</button></a>
-                <a href="#portfolio"><button class="menu-button">Portfolio</button></a>
-                <a href="#contact"><button class="menu-button">Contact</button></a>
-                <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/" aria-label="Link to my LinkedIn"><img class="social" src="img/linkedin.svg" alt="LinkedIn"></a>
-                <a href="https://github.com/lumiwyou" aria-label="Link to my Github"><img class="social" src="img/github.svg" alt="Github"></a>
-                <div class="resume-header-container disabled-feature">
-                    <a href="doc/resume.pdf" aria-label="Link to my resume">
-                        <span>For recruiters</span>
-                        <img src="img/doc.svg" alt="Resume file for recruiters - click to see">
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="section hero-section" id="about">
-            <div class="section-title">
-                <div class="content-column">
-                    <h1>About me</h1>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Lumi Hyväri is a JavaScript Fullstack Engineer based in Stockholm, specializing in software development, cybersecurity, Linux, and modern web technologies.">
+        <meta name="keywords"
+            content="Lumi Hyväri, JavaScript Fullstack Engineer, Stockholm, software developer, web developer, cybersecurity, Linux, frontend, backend, portfolio">
+        <meta name="author" content="Lumi Hyväri">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#0f172a">
+        <link rel="canonical" href="https://lumiwyou.github.io/">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playwrite+CA+Guides&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Varta:wght@300..700&display=swap"
+            rel="stylesheet">
+        <meta property="og:title"
+            content="Lumi Hyväri | JavaScript Fullstack Engineer">
+        <meta property="og:description"
+            content="Portfolio and contact page for Lumi Hyväri, a JavaScript Fullstack Engineer in Stockholm specializing in software development, cybersecurity, and Linux systems.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://lumiwyou.github.io/">
+        <meta property="og:site_name" content="Lumi Hyväri">
+        <meta property="og:image"
+            content="https://lumiwyou.github.io/img/seo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt"
+            content="Lumi Hyväri portfolio preview image">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title"
+            content="Lumi Hyväri | JavaScript Fullstack Engineer">
+        <meta name="twitter:description"
+            content="Portfolio and contact page for Lumi Hyväri, a JavaScript Fullstack Engineer in Stockholm specializing in software development, cybersecurity, and Linux systems.">
+        <meta name="twitter:image"
+            content="https://lumiwyou.github.io/img/seo.png">
+        <title>Lumi Hyväri's Portfolio</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="content-column header-content">
+                <img class="logo" src="img/logo.svg"
+                    alt="Lumi's Portfolio Logo">
+                <nav class="header-menu">
+                    <a href="#about"><button
+                            class="menu-button">About</button></a>
+                    <a href="#portfolio"><button
+                            class="menu-button">Portfolio</button></a>
+                    <a href="#contact"><button
+                            class="menu-button">Contact</button></a>
+                    <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                        aria-label="Link to my LinkedIn"><img class="social"
+                            src="img/linkedin.svg" alt="LinkedIn"></a>
+                    <a href="https://github.com/lumiwyou"
+                        aria-label="Link to my Github"><img class="social"
+                            src="img/github.svg" alt="Github"></a>
+                    <div class="resume-header-container disabled-feature">
+                        <a href="doc/resume.pdf" aria-label="Link to my resume">
+                            <span>For recruiters</span>
+                            <img src="img/doc.svg"
+                                alt="Resume file for recruiters - click to see">
+                        </a>
+                    </div>
+                </nav>
             </div>
-            <div class="section-content">
-                <div class="content-column">
-                    <div class="hero">
-                        <img class="me" src="img/me.webp" alt="Me">
-                        <div class="hero-text">
-                            <h2 class="hero-name">Lumi Hyväri</h2>
-                            <h3 class="hero-role">JavaScript Fullstack Engineer</h3>
-                            <p class="hero-bio">
-                                The name is Lumi and I am a Javascript Fullstack Engineer currently studying @ Chas Academy in Stockholm!
+        </header>
+        <main>
+            <section class="section hero-section" id="about">
+                <div class="section-title">
+                    <div class="content-column">
+                        <h1>About me</h1>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="content-column">
+                        <div class="hero">
+                            <img class="me" src="img/me.webp" alt="Me">
+                            <div class="hero-text">
+                                <h2 class="hero-name">Lumi Hyväri</h2>
+                                <h3 class="hero-role">JavaScript Fullstack
+                                    Engineer</h3>
+                                <p class="hero-bio">
+                                    The name is Lumi and I am a Javascript
+                                    Fullstack Engineer currently studying @ Chas
+                                    Academy in Stockholm!
+                                </p>
+                                <p class="details">
+                                    Chas Academy | Stockholm
+                                </p>
+                                <div class="hero-buttons">
+                                    <a
+                                        href="#portfolio"><button>Portfolio</button></a>
+                                    <a
+                                        href="#contact"><button>Contact</button></a>
+                                    <a
+                                        href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                                        aria-label="Link to my LinkedIn"><img
+                                            class="social"
+                                            src="img/linkedin.svg"
+                                            alt="LinkedIn"></a>
+                                    <a href="https://github.com/lumiwyou"
+                                        aria-label="Link to my Github"><img
+                                            class="social" src="img/github.svg"
+                                            alt="Github"></a>
+                                    <a href="doc/resume.pdf"
+                                        aria-label="Link to my resume"><button
+                                            class="resume-button disabled-feature">Resume
+                                            (PDF)</button></a>
+                                </div>
+                                <a href="doc/resume.pdf"
+                                    aria-label="Link to my resume"><button
+                                        class="resume-button-mobile disabled-feature"
+                                        hidden="true">Resume (PDF)</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-terdiary" id="biography">
+                <div class="section-content">
+                    <div class="content-column">
+                        <div class="letter">
+                            <h2>Biography</h2>
+                            <p>
+                                🔐 Security Awareness. 💻 Software Development.
+                                📫 Open-mindedness.
+                                <br><br>
+                                I am proficient in software engineering using
+                                Javascript, C/C++, and Python. Currently, I am
+                                studying Javascript Fullstack Engineering @ Chas
+                                Academy to further specialize and formalize upon
+                                my prior personal experience using Typescript,
+                                Bootstrap, HTML/CSS, Docker, Node.js,
+                                Express.js, MySQL, and more.
+                                <br><br>
+                                I am also enthusiastic about Linux system
+                                internals and have prior personal experience in
+                                system administration. In my spare time I
+                                research into different topics such as
+                                cyber-security and how software and hardware
+                                work. I have found an artistic joy in digital
+                                design creation using Affinity Design.
                             </p>
-                            <p class="details">
-                                Chas Academy | Stockholm
-                            </p>
-                            <div class="hero-buttons">
-                                <a href="#portfolio"><button>Portfolio</button></a>
-                                <a href="#contact"><button>Contact</button></a>
-                                <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/" aria-label="Link to my LinkedIn"><img class="social" src="img/linkedin.svg" alt="LinkedIn"></a>
-                                <a href="https://github.com/lumiwyou" aria-label="Link to my Github"><img class="social" src="img/github.svg" alt="Github"></a>
-                                <a href="doc/resume.pdf" aria-label="Link to my resume"><button class="resume-button disabled-feature">Resume (PDF)</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-secondary" id="portfolio">
+                <div class="section-title">
+                    <div class="content-column">
+                        <h1>Portfolio</h1>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="content-column">
+                        <h2>Highlighed projects</h2>
+                        <p>Here you can find my selection of projects</p>
+                        <div class="catalogue">
+                            <div class="item-card">
+                                <h3>Safeheap</h3>
+                                <p>C/C++ Memory vulnerability mitigation
+                                    library</p>
+                                <a href="https://github.com/lumiwyou/safeheap"
+                                    aria-label="Link to my Safeheap-project"><button>Explore</button></a>
                             </div>
-                            <a href="doc/resume.pdf" aria-label="Link to my resume"><button class="resume-button-mobile disabled-feature" hidden="true">Resume (PDF)</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-terdiary" id="biography">
-            <div class="section-content">
-                <div class="content-column">
-                    <div class="letter">
-                        <h2>Biography</h2>
-                        <p>
-                            🔐 Security Awareness. 💻 Software Development. 📫 Open-mindedness.
-                            <br><br>
-                            I am proficient in software engineering using Javascript, C/C++, and Python. Currently, I am studying Javascript Fullstack Engineering @ Chas Academy to further specialize and formalize upon my prior personal experience using Typescript, Bootstrap, HTML/CSS, Docker, Node.js, Express.js, MySQL, and more.
-                            <br><br>
-                            I am also enthusiastic about Linux system internals and have prior personal experience in system administration. In my spare time I research into different topics such as cyber-security and how software and hardware work. I have found an artistic joy in digital design creation using Affinity Design.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-secondary" id="portfolio">
-            <div class="section-title">
-                <div class="content-column">
-                    <h1>Portfolio</h1>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="content-column">
-                    <h2>Highlighed projects</h2>
-                    <p>Here you can find my selection of projects</p>
-                    <div class="catalogue">
-                        <div class="item-card">
-                            <h3>Safeheap</h3>
-                            <p>C/C++ Memory vulnerability mitigation library</p>
-                            <a href="https://github.com/lumiwyou/safeheap"  aria-label="Link to my Safeheap-project"><button>Explore</button></a>
-                        </div>
-                        <div class="item-card">
-                            <h3>Helpviewer</h3>
-                            <p>Microsoft Helpviewer Documentation Offline Reader</p>
-                            <a href="https://github.com/lumiwyou/helpviewer-old" aria-label="Link to my Helpviewer-project"><button>Explore</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section-terdiary" id="skillset">
-            <div class="section-title">
-                <div class="content-column">
-                    <h1>Skillset</h1>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="content-column">
-                    <h2>My skills</h2>
-                    <p>Here are my technical skills</p>
-                    <h2>Backend</h2>
-                    <hr>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Typescript</li>
-                        <li>MySQL</li>
-                        <li>Docker</li>
-                        <li>Express</li>
-                    </ul>
-                    <h2>Frontend</h2>
-                    <hr>
-                    <ul>
-                        <li>Bootstrap</li>
-                        <li>HTML5/CSS5</li>
-                        <li>QT5</li>
-                    </ul>
-                    <h2>Misc.</h2>
-                    <hr>
-                    <ul>
-                        <li>Digital design</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="contact">
-            <div class="section-title">
-                <div class="content-column">
-                    <h1>Contact</h1>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="content-column">
-                    <h2>Send me an email</h2>
-                    <p>Simply enter your email, message and click "submit"</p>
-                    <form action="https://formspree.io/f/xnpjjpnq" method="POST" class="contact-form">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="example@hello.net">
-                        <label for="email-body">Message</label>
-                        <textarea name="message" placeholder="Enter your message"></textarea>
-                        <button type="submit">Submit</button>
-                        <p>If you need to contact me securely you can use my <a href="keys/pubkey.asc">public key</a>. <span style="font-style: italic;">Prefereably use local encryption/decryption rather than reliance on external services.</span> <a href="guide.html">Here</a> is a written guide on how to do this.</p>
-                        <p class="form-legal">By submitting this form, your information (such as your name, email address, and message) will be transmitted to and processed by Formspree, Inc., our third-party form-handling service, in accordance with the <a href="https://formspree.io/legal/privacy-policy/">Formspree Privacy Policy</a>. We use this information solely to respond to your inquiry.</p>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <section class="section section-secondary" id="certificates">
-            <div class="section-title">
-                <div class="content-column">
-                    <h1>Certificates</h1>
-                </div>
-            </div>
-            <div class="section-content">
-                <div class="content-column">
-                    <div class="certificate-frames">
-                        <div class="frame">
-                            <div class="img-container">
-                                <img src="img/isc2.webp" alt="Image of ISC2 CC training completion-certificate &mdash; [Details blurred for privacy/security]">
-                                <p>Image of ISC2 CC training completion-certificate &mdash; [Details blurred for privacy/security]</p>
-                            </div>
-                            <div class="text">
-                                <h2 class="title">Completed ISC2 Certified in Cybersecurity (CC) Training</h2>
-                                <p class="issuer">ISC2</p>
-                                <p class="expiration">Issued Apr. 2026 · Expires Apr. 2029</p>
-                                <a href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
+                            <div class="item-card">
+                                <h3>Helpviewer</h3>
+                                <p>Microsoft Helpviewer Documentation Offline
+                                    Reader</p>
+                                <a
+                                    href="https://github.com/lumiwyou/helpviewer-old"
+                                    aria-label="Link to my Helpviewer-project"><button>Explore</button></a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+            <section class="section section-terdiary" id="skillset">
+                <div class="section-title">
+                    <div class="content-column">
+                        <h1>Skillset</h1>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="content-column">
+                        <h2>My skills</h2>
+                        <p>Here are my technical skills</p>
+                        <h2>Backend</h2>
+                        <hr>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Typescript</li>
+                            <li>MySQL</li>
+                            <li>Docker</li>
+                            <li>Express</li>
+                        </ul>
+                        <h2>Frontend</h2>
+                        <hr>
+                        <ul>
+                            <li>Bootstrap</li>
+                            <li>HTML5/CSS5</li>
+                            <li>QT5</li>
+                        </ul>
+                        <h2>Misc.</h2>
+                        <hr>
+                        <ul>
+                            <li>Digital design</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="contact">
+                <div class="section-title">
+                    <div class="content-column">
+                        <h1>Contact</h1>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="content-column">
+                        <h2>Send me an email</h2>
+                        <p>Simply enter your email, message and click
+                            "submit"</p>
+                        <form action="https://formspree.io/f/xnpjjpnq"
+                            method="POST" class="contact-form">
+                            <label for="email">Email</label>
+                            <input type="email" name="email"
+                                placeholder="example@hello.net">
+                            <label for="email-body">Message</label>
+                            <textarea name="message"
+                                placeholder="Enter your message"></textarea>
+                            <button type="submit">Submit</button>
+                            <p>If you need to contact me securely you can use my
+                                <a href="keys/pubkey.asc">public key</a>. <span
+                                    style="font-style: italic;">Prefereably use
+                                    local encryption/decryption rather than
+                                    reliance on external services.</span> <a
+                                    href="guide.html">Here</a> is a written
+                                guide on how to do this.</p>
+                            <p class="form-legal">By submitting this form, your
+                                information (such as your name, email address,
+                                and message) will be transmitted to and
+                                processed by Formspree, Inc., our third-party
+                                form-handling service, in accordance with the <a
+                                    href="https://formspree.io/legal/privacy-policy/">Formspree
+                                    Privacy Policy</a>. We use this information
+                                solely to respond to your inquiry.</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-secondary" id="certificates">
+                <div class="section-title">
+                    <div class="content-column">
+                        <h1>Certificates</h1>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <div class="content-column">
+                        <div class="certificate-frames">
+                            <div class="frame">
+                                <div class="img-container">
+                                    <img src="img/isc2.webp"
+                                        alt="Image of ISC2 CC training completion-certificate &mdash; [Details blurred for privacy/security]">
+                                    <p>Image of ISC2 CC training
+                                        completion-certificate &mdash; [Details
+                                        blurred for privacy/security]</p>
+                                </div>
+                                <div class="text">
+                                    <h2 class="title">Completed ISC2 Certified
+                                        in Cybersecurity (CC) Training</h2>
+                                    <p class="issuer">ISC2</p>
+                                    <p class="expiration">Issued Apr. 2026 ·
+                                        Expires Apr. 2029</p>
+                                    <a
+                                        href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p
+                                            class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <div class="content-column">
+                <p>Copyright &copy; Lumi Hyväri</p>
             </div>
-        </section>
-    </main>
-    <footer class="page-footer">
-        <div class="content-column">
-            <p>Copyright &copy; Lumi Hyväri</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+        <dialog class="dark-theme-notice"
+            aria-labelledby="dark-theme-notice-title">
+            <h2 id="dark-theme-notice-title">Dark theme in development</h2>
+            <p>The dark theme is still in development. Some parts of this site
+                may not display as intended.</p>
+            <button type="button" id="dark-theme-notice-close">Close</button>
+        </dialog>
+        <script>
+        const darkThemeNotice = document.querySelector(".dark-theme-notice");
+        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+        if (prefersDarkScheme.matches) {
+            darkThemeNotice.showModal();
+        }
+
+        document.querySelector("#dark-theme-notice-close").addEventListener("click", () => {
+            darkThemeNotice.close();
+        });
+
+        darkThemeNotice.addEventListener("click", (event) => {
+            if (event.target === darkThemeNotice) {
+                darkThemeNotice.close();
+            }
+        });
+    </script>
+    </body>
 </html>
