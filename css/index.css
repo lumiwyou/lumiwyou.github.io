@@ -73,15 +73,24 @@ button:hover {
   padding: 1em;
 
   .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: content-box;
+    gap: 0.4em;
     border: 0;
     padding: 1em;
     background: none;
     height: 50px;
     /*border-radius: 30px;*/
+
+    img {
+      width: 1em;
+      height: 1em;
+    }
   }
   .menu-button:hover {
     border-bottom: 3px solid var(--highlight-color);
-    height: calc(50px - 4px);
   }
 
   .social {
@@ -159,6 +168,28 @@ button:hover {
 
 .text-container {
   padding: 1em;
+}
+
+.resume-button {
+  display: flex;
+  flex-direction: row;
+  padding:.5em;
+  background-color: #f5f5f7;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  height:100%;
+
+  p {
+    align-self: self-start;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  img {
+    width:30px;
+    align-self: self-end;
+  }
 }
 
 .letter {
@@ -267,6 +298,14 @@ button:hover {
 .hero-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
+
+  .hero-primary-buttons,
+  .hero-secondary-buttons {
+    display: flex;
+    align-items: center;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -294,6 +333,7 @@ button:hover {
   background-color: var(--surface-bg);
   padding-block: 1em;
   border-top: 1px solid var(--page-border);
+  text-align: center;
 }
 
 @media (width <= 320px) {
@@ -344,8 +384,13 @@ button:hover {
   }
 
   .hero-buttons {
+    flex-wrap: wrap;
     align-items: center;
-    height: 100px;
+    height: auto;
+
+    .hero-secondary-buttons {
+      height:100px;
+    }
 
     a {
       display: inline-flex;
@@ -357,6 +402,7 @@ button:hover {
       .social {
         display: inline-block;
         width: 40px;
+        height:fit-content;
       }
     }
   }
@@ -394,6 +440,76 @@ button:hover {
   color: #fff;
   background: #705d43;
   cursor: pointer;
+}
+
+.dropdown-content {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  z-index: 3;
+  display: none;
+  height:100%;
+  width: min(18rem, 90vw);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid var(--page-border);
+  background-color: var(--surface-bg);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+
+  .dropdown-footer {
+    text-align: center;
+    padding:.2em;
+    font-size: 15px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .menu a {
+    display: block;
+  }
+  .menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+
+    img {
+      width: 1em;
+      height: 1em;
+      flex: 0 0 auto;
+    }
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    .social-btn {
+      width:35px;
+    }
+  }
+}
+
+.dropdown-btn {
+  display: none;
+  img {
+    width:20px;
+  }
+}
+
+.page-header:has(.dropdown-btn:hover, .dropdown-btn:focus) + .dropdown-content,
+.dropdown-content:hover,
+.dropdown-content:focus-within {
+  display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -456,6 +572,13 @@ button:hover {
     img {
       width: 300px;
     }
+  }
+
+  .dropdown-btn {
+    display: block;
+  }
+  .header-menu {
+    display: none;
   }
 }
 
