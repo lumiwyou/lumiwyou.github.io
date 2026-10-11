@@ -391,7 +391,6 @@ button:hover {
 .dark-theme-notice button {
   padding: 0.6rem 1rem;
   border: 0;
-  border-radius: 0.35rem;
   color: #fff;
   background: #705d43;
   cursor: pointer;
