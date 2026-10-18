@@ -235,6 +235,7 @@ button:hover {
 .project-catalog .project-card {
   background-color: var(--surface-bg);
   padding: 1em;
+  border: 1px solid var(--border-subtle);
 }
 
 .section--tertiary {
@@ -267,6 +268,7 @@ button:hover {
   .profile-image {
     width: clamp(250px, 35vw, 450px);
     height: auto;
+    border-radius: 50%;
   }
 
   .hero__content {
@@ -300,26 +302,58 @@ button:hover {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 
-  .hero__primary-actions,
-  .hero__secondary-actions {
-    display: flex;
-    align-items: center;
-  }
+.hero__primary-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    button {
-      margin-right: 1em;
-    }
+.hero__secondary-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-    img {
-      display: none;
-      margin-right: 1em;
-      width: 50px;
-    }
-  }
+.hero__link,
+.hero__social-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.hero__button {
+  min-width: 8rem;
+  margin-right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hero__button img {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.hero__social-link img,
+.hero__social-link .social-link {
+  display: block;
+  margin-right: 0;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .project-catalog {
@@ -368,6 +402,30 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+  .hero__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero__primary-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+
+  .hero__link {
+    width: 100%;
+  }
+
+  .hero__button {
+    width: 100%;
+    min-width: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
   .main-nav {
     img {
       display: none;
@@ -395,22 +453,20 @@ button:hover {
     justify-content: center;
     height: auto;
 
-    .hero__secondary-actions {
-      height: auto;
-    }
-
     a {
       display: inline-flex;
       align-items: center;
+    }
 
-      button {
-        display: inline-block;
-      }
-      .social-link {
-        display: inline-block;
-        width: 40px;
-        height: fit-content;
-      }
+    .hero__button {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .social-link {
+      display: block;
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -582,4 +638,3 @@ button:hover {
     }
   }
 }
-
