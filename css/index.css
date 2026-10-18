@@ -53,18 +53,18 @@ button:hover {
   box-sizing: border-box;
 }
 
-.header-content {
+.page-header__content {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  .logo {
+  .site-logo {
     height: 80px;
   }
 }
 
-.header-menu {
+.main-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -72,7 +72,7 @@ button:hover {
   height: 100%;
   padding: 1em;
 
-  .menu-button {
+  .nav-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -89,11 +89,11 @@ button:hover {
       height: 1em;
     }
   }
-  .menu-button:hover {
+  .nav-button:hover {
     border-bottom: 3px solid var(--highlight-color);
   }
 
-  .social {
+  .social-link {
     height: 35px;
     padding: 0.5em;
   }
@@ -104,7 +104,7 @@ button:hover {
   flex-direction: column;
   padding-bottom: 2em;
 
-  .section-title {
+  .section__title {
     h1 {
       font-family: "Playwrite CA Guides", cursive;
       font-weight: 400;
@@ -119,8 +119,8 @@ button:hover {
   }
 }
 
-.section .section-title,
-.section-secondary {
+.section .section__title,
+.section--secondary {
   background-color: var(--color-alpha);
 }
 
@@ -192,18 +192,18 @@ button:hover {
   }
 }
 
-.letter {
+.biography-card {
   background-color: var(--letter-bg);
   padding: 2em;
 }
 
-.certificate-frames {
-  .frame {
+.certificate-list {
+  .certificate-item {
     border: 1px solid gray;
     margin-bottom: 1em;
     display: flex;
     flex-direction: row;
-    .img-container {
+    .certificate-item__image {
       width: 50%;
       text-align: center;
       img {
@@ -215,41 +215,41 @@ button:hover {
         font-size: 10px;
       }
     }
-    .text {
+    .certificate-item__content {
       p {
         margin: 5px;
       }
-      .issuer {
+      .certificate-item__issuer {
         color: var(--highlight-color);
         font-weight: bold;
       }
-      .expiration {
+      .certificate-item__expiration {
         font-style: italic;
       }
     }
   }
 }
 
-.certificate-frames .frame,
-.catalogue .item-card {
+.certificate-list .certificate-item,
+.project-catalog .project-card {
   background-color: var(--surface-bg);
   padding: 1em;
 }
 
-.section-terdiary {
+.section--tertiary {
   background-color: var(--surface-bg);
   color: #000;
 
-  .section-title {
+  .section__title {
     background-color: inherit;
   }
 }
 
-.hero-section {
+.section--hero {
   position: relative;
   overflow: hidden;
 
-  .section-content {
+  .section__content {
     position: relative;
     z-index: 1;
   }
@@ -263,12 +263,12 @@ button:hover {
   padding-block: 1em;
   justify-content: center;
 
-  img {
+  .profile-image {
     width: 450px;
     height: auto;
   }
 
-  .hero-text {
+  .hero__content {
     padding: 1em;
 
     h2,
@@ -277,31 +277,31 @@ button:hover {
       margin-bottom: 0.3em;
     }
 
-    .hero-name {
+    .hero__name {
       color: inherit;
       font-size: 30px;
     }
-    .hero-role {
+    .hero__role {
       color: var(--highlight-color);
       font-size: 20px;
     }
-    .hero-bio {
+    .hero__bio {
       font-style: italic;
     }
-    .details {
+    .hero__meta {
       color: #555;
       font-size: 15px;
     }
   }
 }
 
-.hero-buttons {
+.hero__actions {
   display: flex;
   flex-direction: row;
   align-items: center;
 
-  .hero-primary-buttons,
-  .hero-secondary-buttons {
+  .hero__primary-actions,
+  .hero__secondary-actions {
     display: flex;
     align-items: center;
   }
@@ -321,7 +321,7 @@ button:hover {
   }
 }
 
-.catalogue {
+.project-catalog {
   padding-block: 2em;
   display: flex;
   flex-direction: column;
@@ -340,18 +340,18 @@ button:hover {
   .hero {
     flex-direction: column;
     align-items: center;
-    img {
+    .profile-image {
       width: 400px;
     }
-    .hero-text {
+    .hero__content {
       padding: 2em;
     }
   }
 }
 
 @media (width <= 620px) {
-  .certificate-frames {
-    .frame {
+  .certificate-list {
+    .certificate-item {
       flex-direction: column;
       align-items: center;
     }
@@ -359,7 +359,7 @@ button:hover {
 }
 
 @media (width <= 480px) {
-  .header-menu {
+  .main-nav {
     img {
       display: none;
       visibility: hidden;
@@ -368,14 +368,14 @@ button:hover {
 
   .hero {
     flex-direction: column;
-    img {
+    .profile-image {
       width: 250px;
     }
   }
 
-  .certificate-frames {
-    .frame {
-      .img-container {
+  .certificate-list {
+    .certificate-item {
+      .certificate-item__image {
         img {
           width: 100%;
         }
@@ -383,12 +383,12 @@ button:hover {
     }
   }
 
-  .hero-buttons {
+  .hero__actions {
     flex-wrap: wrap;
     align-items: center;
     height: auto;
 
-    .hero-secondary-buttons {
+    .hero__secondary-actions {
       height:100px;
     }
 
@@ -399,7 +399,7 @@ button:hover {
       button {
         display: inline-block;
       }
-      .social {
+      .social-link {
         display: inline-block;
         width: 40px;
         height:fit-content;
@@ -410,14 +410,14 @@ button:hover {
 
 @media (width <= 703px) {
   .hero {
-    img {
+    .profile-image {
       width: 300px;
       height: auto;
     }
   }
 }
 
-.dark-theme-notice {
+.site-notice {
   max-width: 28rem;
   padding: 1.5rem;
   border: 1px solid #705d43;
@@ -426,15 +426,15 @@ button:hover {
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 25%);
 }
 
-.dark-theme-notice::backdrop {
+.site-notice::backdrop {
   background: rgb(0 0 0 / 60%);
 }
 
-.dark-theme-notice h2 {
+.site-notice h2 {
   margin-top: 0;
 }
 
-.dark-theme-notice button {
+.site-notice button {
   padding: 0.6rem 1rem;
   border: 0;
   color: #fff;
@@ -442,7 +442,7 @@ button:hover {
   cursor: pointer;
 }
 
-.dropdown-content {
+.mobile-menu {
   position: fixed;
   top: 80px;
   right: 0;
@@ -458,22 +458,22 @@ button:hover {
   background-color: var(--surface-bg);
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 
-  .dropdown-footer {
+  .mobile-menu__footer {
     text-align: center;
     padding:.2em;
     font-size: 15px;
   }
 
-  .menu {
+  .mobile-menu__list {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 1rem;
   }
-  .menu a {
+  .mobile-menu__list a {
     display: block;
   }
-  .menu-btn {
+  .mobile-menu__button {
     display: inline-flex;
     align-items: center;
     gap: 0.4em;
@@ -488,38 +488,38 @@ button:hover {
     }
   }
 
-  .socials {
+  .mobile-menu__socials {
     display: flex;
     flex-direction: row;
     gap: 1em;
     justify-content: center;
-    .social-btn {
+    .mobile-menu__social-link {
       width:35px;
     }
   }
 }
 
-.dropdown-btn {
+.mobile-menu-toggle {
   display: none;
   img {
     width:20px;
   }
 }
 
-.page-header:has(.dropdown-btn:hover, .dropdown-btn:focus) + .dropdown-content,
-.dropdown-content:hover,
-.dropdown-content:focus-within {
+.page-header:has(.mobile-menu-toggle:hover, .mobile-menu-toggle:focus) + .mobile-menu,
+.mobile-menu:hover,
+.mobile-menu:focus-within {
   display: block;
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark-theme-notice {
+  .site-notice {
     color: #fff;
     background: #212121;
   }
 
-  .dark-theme-notice h2,
-  .dark-theme-notice p {
+  .site-notice h2,
+  .site-notice p {
     color: #fff !important;
   }
 }
@@ -529,7 +529,7 @@ button:hover {
   .page-header,
   .page-footer {
     background-color: #212121;
-    .menu-button {
+    .nav-button {
       color: white;
     }
   }
@@ -546,45 +546,45 @@ button:hover {
   a {
     color: red;
   }
-  .frame {
+  .certificate-item {
     background-color: transparent !important;
     border: none !important;
   }
   .section {
     background-color: #212121;
   }
-  .letter {
+  .biography-card {
     background-color: #705d43 !important;
   }
-  .section-title {
+  .section__title {
     background-color: #705d43 !important;
   }
-  .logo {
+  .site-logo {
     filter: grayscale() brightness(100);
   }
-  .item-card {
+  .project-card {
     background-color: #705d43 !important;
   }
 }
 
 @media (width <= 656px) {
   .hero {
-    img {
+    .profile-image {
       width: 300px;
     }
   }
 
-  .dropdown-btn {
+  .mobile-menu-toggle {
     display: block;
   }
-  .header-menu {
+  .main-nav {
     display: none;
   }
 }
 
 @media (width <= 380px) {
-  .header-content {
-    .logo {
+  .page-header__content {
+    .site-logo {
       width: 70px;
     }
   }
@@ -592,7 +592,7 @@ button:hover {
 
 @media (width <= 722px) {
   .hero {
-    img {
+    .profile-image {
       width: 300px;
       height: 300px;
     }
