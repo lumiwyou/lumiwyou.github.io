@@ -45,100 +45,106 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="content-column header-content">
-                <img class="logo" src="img/logo.svg"
+            <div class="content-column page-header__content">
+                <img class="site-logo" src="img/logo.svg"
                     alt="Lumi's Portfolio Logo">
-                <nav class="header-menu">
+                <nav class="main-nav">
                     <a href="#about" aria-label="About"><button
-                            class="menu-button">About</button></a>
+                            class="nav-button">About</button></a>
                     <a href="#portfolio" aria-label="Portfolio"><button
-                            class="menu-button">Portfolio</button></a>
+                            class="nav-button">Portfolio</button></a>
                     <a href="#contact" aria-label="Contact"><button
-                            class="menu-button">Contact</button></a>
+                            class="nav-button">Contact</button></a>
                     <a href="doc/resume.pdf" aria-label="Resume"><button
-                            class="menu-button"><img
+                            class="nav-button"><img
                                 src="img/pdf.svg" alt>Resume</button></a>
                     <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
-                        aria-label="Link to my LinkedIn"><img class="social"
+                        aria-label="Link to my LinkedIn"><img
+                            class="social-link"
                             src="img/linkedin.svg" alt="LinkedIn"></a>
                     <a href="https://github.com/lumiwyou"
-                        aria-label="Link to my Github"><img class="social"
+                        aria-label="Link to my Github"><img class="social-link"
                             src="img/github.svg" alt="Github"></a>
                 </nav>
-                <button class="dropdown-btn"><img src="img/menu.svg" alt="Menu"></button>
+                <button class="mobile-menu-toggle"><img src="img/menu.svg"
+                        alt="Menu"></button>
             </div>
         </header>
-        <aside class="dropdown-content">
-            <nav class="menu">
+        <aside class="mobile-menu">
+            <nav class="mobile-menu__list">
                 <a href="#about" aria-label="About"><button
-                        class="menu-btn">About</button></a>
+                        class="mobile-menu__button">About</button></a>
                 <a href="#portfolio" aria-label="Portfolio"><button
-                        class="menu-btn">Portfolio</button></a>
+                        class="mobile-menu__button">Portfolio</button></a>
                 <a href="#contact" aria-label="Contact"><button
-                        class="menu-btn">Contact</button></a>
+                        class="mobile-menu__button">Contact</button></a>
                 <a href="doc/resume.pdf" aria-label="Resume"><button
-                        class="menu-btn"><img
+                        class="mobile-menu__button"><img
                             src="img/pdf.svg" alt>Resume</button></a>
-                <div class="socials">
+                <div class="mobile-menu__socials">
                     <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
-                        aria-label="Link to my LinkedIn"><img class="social-btn"
+                        aria-label="Link to my LinkedIn"><img
+                            class="mobile-menu__social-link"
                             src="img/linkedin.svg" alt="LinkedIn"></a>
                     <a href="https://github.com/lumiwyou"
-                        aria-label="Link to my Github"><img class="social-btn"
+                        aria-label="Link to my Github"><img
+                            class="mobile-menu__social-link"
                             src="img/github.svg" alt="Github"></a>
                 </div>
             </nav>
-            <footer class="dropdown-footer">
+            <footer class="mobile-menu__footer">
                 <p>Copyright &copy; Lumi Hyväri</p>
             </footer>
         </aside>
         <main>
-            <section class="section hero-section" id="about">
-                <div class="section-title">
+            <section class="section section--hero" id="about">
+                <div class="section__title">
                     <div class="content-column">
                         <h1>About me</h1>
                     </div>
                 </div>
-                <div class="section-content">
+                <div class="section__content">
                     <div class="content-column">
                         <div class="hero">
-                            <img class="me" src="img/me.webp" alt="Me">
-                            <div class="hero-text">
-                                <h2 class="hero-name">Lumi Hyväri</h2>
-                                <h3 class="hero-role">JavaScript Fullstack
+                            <img class="profile-image" src="img/me.webp"
+                                alt="Me">
+                            <div class="hero__content">
+                                <h2 class="hero__name">Lumi Hyväri</h2>
+                                <h3 class="hero__role">JavaScript Fullstack
                                     Engineer</h3>
-                                <p class="hero-bio">
+                                <p class="hero__bio">
                                     The name is Lumi and I am a Javascript
                                     Fullstack Engineer currently studying @ Chas
                                     Academy in Stockholm!
                                 </p>
-                                <p class="details">
+                                <p class="hero__meta">
                                     Chas Academy | Stockholm
                                 </p>
-                                <div class="hero-buttons">
-                                    <div class="hero-primary-buttons">
+                                <div class="hero__actions">
+                                    <div class="hero__primary-actions">
                                         <a href="#portfolio"
-                                            aria-label="Portfolio"><button>Portfolio</button></a>
+                                            aria-label="Portfolio" class="hero__link"><button class="hero__button">Portfolio</button></a>
                                         <a href="#contact"
-                                            aria-label="Contact"><button>Contact</button></a>
+                                            aria-label="Contact" class="hero__link"><button class="hero__button">Contact</button></a>
+                                        <a href="doc/resume.pdf"
+                                            aria-label="Resume" class="hero__link"><button
+                                                class="hero__button"><img
+                                                    src="img/pdf.svg"
+                                                    alt="PDF-file">Resume</button></a>
+                                    </div>
+                                    <div class="hero__secondary-actions">
                                         <a
                                             href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
-                                            aria-label="Link to my LinkedIn"><img
-                                                class="social"
+                                            aria-label="Link to my LinkedIn" class="hero__social-link"><img
+                                                class="social-link"
                                                 src="img/linkedin.svg"
                                                 alt="LinkedIn"></a>
                                         <a href="https://github.com/lumiwyou"
-                                            aria-label="Link to my Github"><img
-                                                class="social"
+                                            aria-label="Link to my Github" class="hero__social-link"><img
+                                                class="social-link"
                                                 src="img/github.svg"
                                                 alt="Github"></a>
                                     </div>
-                                    <div class="hero-secondary-buttons">
-                                        <a href="doc/resume.pdf"
-                                            aria-label="Resume"><button
-                                                class="menu-button"><img
-                                                    src="img/pdf.svg"
-                                                    alt="PDF-file">Resume</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -146,10 +152,10 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-terdiary" id="biography">
-                <div class="section-content">
+            <section class="section section--tertiary" id="biography">
+                <div class="section__content">
                     <div class="content-column">
-                        <div class="letter">
+                        <div class="biography-card">
                             <h2>Biography</h2>
                             <p>
                                 🔐 Security Awareness. 💻 Software Development.
@@ -175,25 +181,25 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-secondary" id="portfolio">
-                <div class="section-title">
+            <section class="section section--secondary" id="portfolio">
+                <div class="section__title">
                     <div class="content-column">
                         <h1>Portfolio</h1>
                     </div>
                 </div>
-                <div class="section-content">
+                <div class="section__content">
                     <div class="content-column">
                         <h2>Highlighed projects</h2>
                         <p>Here you can find my selection of projects</p>
-                        <div class="catalogue">
-                            <div class="item-card">
+                        <div class="project-catalog">
+                            <div class="project-card">
                                 <h3>Safeheap</h3>
                                 <p>C/C++ Memory vulnerability mitigation
                                     library</p>
                                 <a href="https://github.com/lumiwyou/safeheap"
                                     aria-label="Link to my Safeheap-project"><button>Explore</button></a>
                             </div>
-                            <div class="item-card">
+                            <div class="project-card">
                                 <h3>Helpviewer</h3>
                                 <p>Microsoft Helpviewer Documentation Offline
                                     Reader</p>
@@ -205,13 +211,13 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-terdiary" id="skillset">
-                <div class="section-title">
+            <section class="section section--tertiary" id="skillset">
+                <div class="section__title">
                     <div class="content-column">
                         <h1>Skillset</h1>
                     </div>
                 </div>
-                <div class="section-content">
+                <div class="section__content">
                     <div class="content-column">
                         <h2>My skills</h2>
                         <p>Here are my technical skills</p>
@@ -240,12 +246,12 @@
                 </div>
             </section>
             <section class="section" id="contact">
-                <div class="section-title">
+                <div class="section__title">
                     <div class="content-column">
                         <h1>Contact</h1>
                     </div>
                 </div>
-                <div class="section-content">
+                <div class="section__content">
                     <div class="content-column">
                         <h2>Send me an email</h2>
                         <p>Simply enter your email, message and click
@@ -278,32 +284,36 @@
                     </div>
                 </div>
             </section>
-            <section class="section section-secondary" id="certificates">
-                <div class="section-title">
+            <section class="section section--secondary" id="certificates">
+                <div class="section__title">
                     <div class="content-column">
                         <h1>Certificates</h1>
                     </div>
                 </div>
-                <div class="section-content">
+                <div class="section__content">
                     <div class="content-column">
-                        <div class="certificate-frames">
-                            <div class="frame">
-                                <div class="img-container">
+                        <div class="certificate-list">
+                            <div class="certificate-item">
+                                <div class="certificate-item__image">
                                     <img src="img/isc2.webp"
                                         alt="Image of ISC2 CC training completion-certificate &mdash; [Details blurred for privacy/security]">
                                     <p>Image of ISC2 CC training
                                         completion-certificate &mdash; [Details
                                         blurred for privacy/security]</p>
                                 </div>
-                                <div class="text">
-                                    <h2 class="title">Completed ISC2 Certified
+                                <div class="certificate-item__content">
+                                    <h2
+                                        class="certificate-item__title">Completed
+                                        ISC2 Certified
                                         in Cybersecurity (CC) Training</h2>
-                                    <p class="issuer">ISC2</p>
-                                    <p class="expiration">Issued Apr. 2026 ·
+                                    <p class="certificate-item__issuer">ISC2</p>
+                                    <p
+                                        class="certificate-item__expiration">Issued
+                                        Apr. 2026 ·
                                         Expires Apr. 2029</p>
                                     <a
                                         href="https://isc2.obrizum.io/org/cc/certificate/61426aa8-a529-4bb2-b4ae-13f5bbb66c20"><p
-                                            class="cert-id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
+                                            class="certificate-item__id">61426aa8-a529-4bb2-b4ae-13f5bbb66c20</p></a>
                                 </div>
                             </div>
                         </div>
@@ -316,28 +326,28 @@
                 <p>Copyright &copy; Lumi Hyväri</p>
             </div>
         </footer>
-        <dialog class="dark-theme-notice"
-            aria-labelledby="dark-theme-notice-title">
-            <h2 id="dark-theme-notice-title">Dark theme in development</h2>
+        <dialog class="site-notice"
+            aria-labelledby="site-notice-title">
+            <h2 id="site-notice-title">Dark theme in development</h2>
             <p>The dark theme is still in development. Some parts of this site
                 may not display as intended.</p>
-            <button type="button" id="dark-theme-notice-close">Close</button>
+            <button type="button" id="site-notice-close">Close</button>
         </dialog>
         <script>
-        const darkThemeNotice = document.querySelector(".dark-theme-notice");
+        const siteNotice = document.querySelector(".site-notice");
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
         if (prefersDarkScheme.matches) {
-            darkThemeNotice.showModal();
+            siteNotice.showModal();
         }
 
-        document.querySelector("#dark-theme-notice-close").addEventListener("click", () => {
-            darkThemeNotice.close();
+        document.querySelector("#site-notice-close").addEventListener("click", () => {
+            siteNotice.close();
         });
 
-        darkThemeNotice.addEventListener("click", (event) => {
-            if (event.target === darkThemeNotice) {
-                darkThemeNotice.close();
+        siteNotice.addEventListener("click", (event) => {
+            if (event.target === siteNotice) {
+                siteNotice.close();
             }
         });
     </script>
