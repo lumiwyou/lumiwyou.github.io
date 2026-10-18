@@ -264,7 +264,7 @@ button:hover {
   justify-content: center;
 
   .profile-image {
-    width: 450px;
+    width: clamp(250px, 35vw, 450px);
     height: auto;
   }
 
@@ -336,20 +336,28 @@ button:hover {
   text-align: center;
 }
 
-@media (width <= 320px) {
+@media (max-width: 900px) {
   .hero {
     flex-direction: column;
     align-items: center;
-    .profile-image {
-      width: 400px;
-    }
-    .hero__content {
-      padding: 2em;
-    }
+    text-align: center;
+  }
+
+  .hero__content {
+    padding: 1em 0 0;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .profile-image {
+    width: min(100%, 360px);
+    height: auto;
   }
 }
 
-@media (width <= 620px) {
+@media (max-width: 620px) {
   .certificate-list {
     .certificate-item {
       flex-direction: column;
@@ -358,7 +366,7 @@ button:hover {
   }
 }
 
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .main-nav {
     img {
       display: none;
@@ -366,11 +374,8 @@ button:hover {
     }
   }
 
-  .hero {
-    flex-direction: column;
-    .profile-image {
-      width: 250px;
-    }
+  .profile-image {
+    width: min(100%, 250px);
   }
 
   .certificate-list {
@@ -386,10 +391,11 @@ button:hover {
   .hero__actions {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     height: auto;
 
     .hero__secondary-actions {
-      height:100px;
+      height: auto;
     }
 
     a {
@@ -402,17 +408,8 @@ button:hover {
       .social-link {
         display: inline-block;
         width: 40px;
-        height:fit-content;
+        height: fit-content;
       }
-    }
-  }
-}
-
-@media (width <= 703px) {
-  .hero {
-    .profile-image {
-      width: 300px;
-      height: auto;
     }
   }
 }
@@ -567,22 +564,17 @@ button:hover {
   }
 }
 
-@media (width <= 656px) {
-  .hero {
-    .profile-image {
-      width: 300px;
-    }
-  }
-
+@media (max-width: 768px) {
   .mobile-menu-toggle {
     display: block;
   }
+
   .main-nav {
     display: none;
   }
 }
 
-@media (width <= 380px) {
+@media (max-width: 380px) {
   .page-header__content {
     .site-logo {
       width: 70px;
@@ -590,18 +582,3 @@ button:hover {
   }
 }
 
-@media (width <= 722px) {
-  .hero {
-    .profile-image {
-      width: 300px;
-      height: 300px;
-    }
-  }
-}
-
-@media (width <= 356px) {
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-}
