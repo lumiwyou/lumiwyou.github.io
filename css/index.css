@@ -399,6 +399,9 @@ button:focus-visible {
 }
 
 #skillset .skill-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.4rem 0.7rem;
   border: 1px solid var(--border-subtle);
   border-radius: 999px;
@@ -406,6 +409,15 @@ button:focus-visible {
   color: var(--text-color);
   font-size: 0.9rem;
   line-height: 1.35;
+}
+
+#skillset .skill-list li i,
+#skillset .skill-logo {
+  flex: 0 0 auto;
+  width: 1.1em;
+  height: 1.1em;
+  font-size: 1.1rem;
+  object-fit: contain;
 }
 
 .section--hero {
@@ -860,6 +872,10 @@ button:focus-visible {
   .mobile-menu__social-link,
   .hero__social-link img {
     filter: brightness(1.5);
+  }
+
+  #skillset .skill-logo {
+    filter: invert(1);
   }
 
   .site-notice {
