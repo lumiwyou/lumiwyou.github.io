@@ -115,24 +115,43 @@ button:focus-visible {
     box-sizing: content-box;
     gap: 0.4em;
     border: 0;
-    border-radius: 0.75rem;
+    border-radius: 0;
     padding: 1em;
     background: none;
     height: 50px;
+    position: relative;
     box-shadow: none;
-    transition: color 160ms ease, background-color 160ms ease;
+    transition: color 160ms ease;
 
     img {
       width: 1em;
       height: 1em;
     }
+
+    &::after {
+      position: absolute;
+      right: 1em;
+      bottom: 0.5rem;
+      left: 1em;
+      height: 2px;
+      background-color: var(--highlight-color);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
   }
   .nav-button:hover {
     border-color: transparent;
-    background-color: var(--button-bg);
+    background-color: transparent;
     box-shadow: none;
     color: var(--highlight-color);
     transform: none;
+  }
+
+  .nav-button:hover::after,
+  .nav-button:focus-visible::after {
+    transform: scaleX(1);
   }
 
   .social-link {
@@ -859,7 +878,7 @@ button:focus-visible {
   }
 
   .nav-button:hover {
-    background-color: var(--button-bg-hover);
+    background-color: transparent;
     color: var(--highlight-color);
   }
 
