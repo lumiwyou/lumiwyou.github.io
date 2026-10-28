@@ -41,7 +41,7 @@
             content="Portfolio and contact page for Lumi Hyväri, a JavaScript Fullstack Engineer in Stockholm specializing in software development, cybersecurity, and Linux systems.">
         <meta name="twitter:image"
             content="https://lumiwyou.github.io/img/seo.png">
-        <title>Lumi Hyväri's Portfolio</title>
+        <title>Lumi Hyväri's Portfolio | Fullstack Engineer</title>
     </head>
     <body>
         <header class="page-header">
@@ -218,30 +218,36 @@
                     </div>
                 </div>
                 <div class="section__content">
-                    <div class="content-column">
+                    <div class="content-column skills-content">
                         <h2>My skills</h2>
-                        <p>Here are my technical skills</p>
-                        <h2>Backend</h2>
-                        <hr>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>Typescript</li>
-                            <li>MySQL</li>
-                            <li>Docker</li>
-                            <li>Express</li>
-                        </ul>
-                        <h2>Frontend</h2>
-                        <hr>
-                        <ul>
-                            <li>Bootstrap</li>
-                            <li>HTML5/CSS5</li>
-                            <li>QT5</li>
-                        </ul>
-                        <h2>Misc.</h2>
-                        <hr>
-                        <ul>
-                            <li>Digital design</li>
-                        </ul>
+                        <p class="skills-intro">Here are my technical skills</p>
+                        <div class="skills-grid">
+                            <article class="skill-card">
+                                <h3>Backend</h3>
+                                <ul class="skill-list">
+                                    <li>Node.js</li>
+                                    <li>Typescript</li>
+                                    <li>MySQL</li>
+                                    <li>Docker</li>
+                                    <li>Express</li>
+                                    <li>Linux</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card">
+                                <h3>Frontend</h3>
+                                <ul class="skill-list">
+                                    <li>Bootstrap</li>
+                                    <li>HTML5/CSS5</li>
+                                    <li>QT5</li>
+                                </ul>
+                            </article>
+                            <article class="skill-card">
+                                <h3>Misc.</h3>
+                                <ul class="skill-list">
+                                    <li>Digital design</li>
+                                </ul>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -321,6 +327,11 @@
                 </div>
             </section>
         </main>
+        <button class="next-section-button" type="button"
+            aria-label="Go to the next section">
+            Next section
+            <span class="next-section-button__icon" aria-hidden="true"></span>
+        </button>
         <footer class="page-footer">
             <div class="content-column">
                 <p>Copyright &copy; Lumi Hyväri</p>
@@ -350,6 +361,53 @@
                 siteNotice.close();
             }
         });
+
+        const sections = Array.from(document.querySelectorAll("main > .section"));
+        const nextSectionButton = document.querySelector(".next-section-button");
+        const header = document.querySelector(".page-header");
+        let scrollUpdateScheduled = false;
+
+        function getCurrentSectionIndex() {
+            const headerBottom = header.getBoundingClientRect().bottom;
+            let currentIndex = 0;
+
+            sections.forEach((section, index) => {
+                if (section.getBoundingClientRect().top <= headerBottom + 1) {
+                    currentIndex = index;
+                }
+            });
+
+            return currentIndex;
+        }
+
+        function updateNextSectionButton() {
+            nextSectionButton.hidden =
+                getCurrentSectionIndex() >= sections.length - 1;
+            scrollUpdateScheduled = false;
+        }
+
+        window.addEventListener("scroll", () => {
+            if (!scrollUpdateScheduled) {
+                scrollUpdateScheduled = true;
+                window.requestAnimationFrame(updateNextSectionButton);
+            }
+        }, { passive: true });
+
+        window.addEventListener("resize", updateNextSectionButton);
+
+        nextSectionButton.addEventListener("click", () => {
+            const nextSection = sections[getCurrentSectionIndex() + 1];
+            if (nextSection) {
+                nextSection.scrollIntoView({
+                    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                        ? "auto"
+                        : "smooth",
+                    block: "start"
+                });
+            }
+        });
+
+        updateNextSectionButton();
     </script>
     </body>
 </html>
