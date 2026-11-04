@@ -625,7 +625,7 @@ button:focus-visible {
     min-width: 0;
     box-sizing: border-box;
     padding: 1em;
-    background-color: white;
+    background-color: var(--surface-bg);
 
     h2,
     h3 {
