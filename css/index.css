@@ -158,6 +158,10 @@ button:focus-visible {
     height: 35px;
     padding: 0.5em;
   }
+
+  .main-nav__github .social-link {
+    filter: brightness(0);
+  }
 }
 
 .section {
@@ -928,6 +932,10 @@ a.hero__social-link--github:hover {
   .main-nav .social-link,
   .mobile-menu__social-link {
     filter: brightness(1.5);
+  }
+
+  .main-nav__github .social-link {
+    filter: brightness(0) invert(1);
   }
 
   #skillset .skill-logo {
