@@ -1,6 +1,7 @@
 
 :root {
   --header-height: 80px;
+  --accent-hue: 34;
   --button-bg: #e9e9ed;
   --button-bg-hover: #f2f2f5;
   --button-shadow:
@@ -8,18 +9,48 @@
     inset 0 1px rgb(255 255 255 / 85%);
   --card-shadow: 0 0.5rem 1.5rem rgb(20 24 35 / 7%);
   --card-shadow-hover: 0 0.8rem 2rem rgb(20 24 35 / 12%);
-  --highlight-color: #7c4600;
+  --highlight-color: hsl(var(--accent-hue) 100% 24%);
   --input-borders: #b7b7b7;
   --page-border: #d3d3d3;
   --border-subtle: #b7b7b7;
-  --border-accent: #705d43;
-  --color-alpha: #faebd7;
-  --letter-bg: #f5f5f7;
-  --frame-border: #f5f5f7;
+  --border-accent: hsl(var(--accent-hue) 25% 35%);
+  --color-alpha: hsl(var(--accent-hue) 75% 91%);
+  --letter-bg: hsl(var(--accent-hue) 10% 96%);
+  --frame-border: var(--letter-bg);
   --surface-bg: #fff;
   --text-color: #212121;
   --muted-color: #555;
-  --link-color: #705d43;
+  --link-color: var(--border-accent);
+}
+
+.debug-accent-picker {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--page-border);
+  border-radius: 0.75rem;
+  background-color: var(--surface-bg);
+  color: var(--text-color);
+  font-size: 0.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+.debug-accent-picker input {
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.site-logo {
+  filter: hue-rotate(calc(var(--accent-hue) * 1deg - 34deg));
 }
 
 .disabled-feature {
@@ -28,6 +59,7 @@
 }
 
 html {
+  accent-color: var(--highlight-color);
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-padding-top: var(--header-height);
@@ -854,18 +886,18 @@ a.hero__social-link--github:hover {
       inset 0 1px rgb(255 255 255 / 8%);
     --card-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 22%);
     --card-shadow-hover: 0 0.8rem 2rem rgb(0 0 0 / 35%);
-    --highlight-color: #f2b66d;
+    --highlight-color: hsl(var(--accent-hue) 82% 69%);
     --input-borders: #475569;
     --page-border: #334155;
     --border-subtle: #475569;
-    --border-accent: #64748b;
-    --color-alpha: #202b3a;
-    --letter-bg: #1e293b;
-    --frame-border: #1e293b;
+    --border-accent: hsl(var(--accent-hue) 18% 45%);
+    --color-alpha: hsl(var(--accent-hue) 30% 18%);
+    --letter-bg: hsl(var(--accent-hue) 25% 18%);
+    --frame-border: var(--letter-bg);
     --surface-bg: #161b22;
     --text-color: #e2e8f0;
     --muted-color: #a8b3c2;
-    --link-color: #93c5fd;
+    --link-color: hsl(var(--accent-hue) 85% 80%);
   }
 
   button:hover {
@@ -955,7 +987,8 @@ a.hero__social-link--github:hover {
   }
 
   .site-logo {
-    filter: grayscale() brightness(100);
+    filter: hue-rotate(calc(var(--accent-hue) * 1deg - 34deg))
+      brightness(2.4) saturate(1.2);
   }
 }
 
