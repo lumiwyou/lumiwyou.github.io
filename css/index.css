@@ -70,6 +70,12 @@ html {
   scroll-padding-top: var(--header-height);
 }
 
+img:not(a img):not(button img) {
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
 body {
   margin: 0;
   font-family: "Varta", sans-serif;
