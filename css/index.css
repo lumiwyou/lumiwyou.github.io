@@ -508,8 +508,10 @@ button:focus-visible {
   --profile-image-size: clamp(250px, 35vw, 450px);
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-block: 1em;
   justify-content: center;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
 
   .profile-image-frame { 
     position: relative;
@@ -571,6 +573,10 @@ button:focus-visible {
   }
 
   .hero__content {
+    flex: 0 1 36rem;
+    width: min(100%, 36rem);
+    min-width: 0;
+    box-sizing: border-box;
     padding: 1em;
 
     h2,
@@ -767,6 +773,7 @@ a.hero__social-link--github:hover {
   }
 
   .hero__content {
+    flex: 0 1 auto;
     padding: 1em 0 0;
   }
 
