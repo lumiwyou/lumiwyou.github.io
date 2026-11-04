@@ -18,6 +18,7 @@
   --letter-bg: hsl(var(--accent-hue) 10% 96%);
   --frame-border: var(--letter-bg);
   --surface-bg: #fff;
+  --hero-star-color: 78 100 145;
   --text-color: #212121;
   --muted-color: #555;
   --link-color: var(--border-accent);
@@ -492,6 +493,52 @@ button:focus-visible {
 
 .section--hero {
   position: relative;
+
+  .hero-stars {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    span {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: rgb(var(--hero-star-color) / 52%);
+      clip-path: polygon(
+        50% 0,
+        56% 42%,
+        100% 50%,
+        56% 58%,
+        50% 100%,
+        44% 58%,
+        0 50%,
+        44% 42%
+      );
+      filter: drop-shadow(0 0 5px rgb(var(--hero-star-color) / 34%));
+    }
+
+    span:nth-child(1) { top: 18%; left: 6%; }
+    span:nth-child(2) { top: 66%; left: 12%; width: 10px; height: 10px; opacity: 0.8; }
+    span:nth-child(3) { top: 39%; left: 19%; width: 12px; height: 12px; }
+    span:nth-child(4) { top: 84%; left: 25%; width: 9px; height: 9px; opacity: 0.75; }
+    span:nth-child(5) { top: 16%; left: 33%; width: 10px; height: 10px; opacity: 0.85; }
+    span:nth-child(6) { top: 57%; left: 39%; width: 19px; height: 19px; }
+    span:nth-child(7) { top: 31%; left: 46%; width: 10px; height: 10px; opacity: 0.8; }
+    span:nth-child(8) { top: 78%; left: 53%; width: 13px; height: 13px; }
+    span:nth-child(9) { top: 12%; left: 60%; width: 9px; height: 9px; opacity: 0.75; }
+    span:nth-child(10) { top: 47%; left: 66%; width: 13px; height: 13px; }
+    span:nth-child(11) { top: 88%; left: 73%; width: 10px; height: 10px; opacity: 0.8; }
+    span:nth-child(12) { top: 24%; left: 79%; width: 18px; height: 18px; }
+    span:nth-child(13) { top: 64%; left: 86%; width: 10px; height: 10px; opacity: 0.8; }
+    span:nth-child(14) { top: 39%; left: 94%; width: 13px; height: 13px; }
+  }
+
+  .section__title {
+    position: relative;
+    z-index: 1;
+  }
 
   .section__content {
     display: flex;
@@ -978,6 +1025,7 @@ a.hero__social-link--github:hover {
     --letter-bg: hsl(var(--accent-hue) 25% 18%);
     --frame-border: var(--letter-bg);
     --surface-bg: #161b22;
+    --hero-star-color: 200 215 240;
     --text-color: #e2e8f0;
     --muted-color: #a8b3c2;
     --link-color: hsl(var(--accent-hue) 85% 80%);
