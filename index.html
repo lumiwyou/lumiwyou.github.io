@@ -53,6 +53,7 @@
             DEBUG accent hue
             <input id="debug-accent-color" type="color" value="#ff9000"
                 aria-label="Change the website accent hue">
+            <output id="debug-accent-degrees" for="debug-accent-color">34&deg;</output>
         </label>
         <header class="page-header">
             <div class="content-column page-header__content">
@@ -403,10 +404,9 @@
                 }
             }
 
-            document.documentElement.style.setProperty(
-                "--accent-hue",
-                String(Math.round((hue + 360) % 360))
-            );
+            const accentHue = Math.round((hue + 360) % 360);
+            document.documentElement.style.setProperty("--accent-hue", String(accentHue));
+            document.querySelector("#debug-accent-degrees").textContent = `${accentHue}°`;
         });
 
         siteNotice.addEventListener("click", (event) => {

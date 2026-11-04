@@ -49,6 +49,11 @@
   cursor: pointer;
 }
 
+.debug-accent-picker output {
+  min-width: 2.5em;
+  white-space: nowrap;
+}
+
 .site-logo {
   filter: hue-rotate(calc(var(--accent-hue) * 1deg - 34deg));
 }
