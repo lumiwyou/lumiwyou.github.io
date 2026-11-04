@@ -524,15 +524,48 @@ button:focus-visible {
 .hero__social-link {
   display: flex;
   align-items: center;
-  justify-content: center;
-  line-height: 0;
+  gap: 0.6rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--page-border);
   border-radius: 0.75rem;
-  transition: background-color 160ms ease, transform 160ms ease;
+  background-color: var(--surface-bg);
+  box-shadow: var(--card-shadow);
+  line-height: 1.2;
+  transition: background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
 }
 
 .hero__social-link:hover {
   background-color: var(--letter-bg);
+  border-color: var(--highlight-color);
+  box-shadow: var(--card-shadow-hover);
   transform: translateY(-2px);
+}
+
+a.hero__social-link--linkedin {
+  border-color: #0a66c2;
+  background-color: #0a66c2;
+  color: #fff;
+}
+
+a.hero__social-link--linkedin:hover {
+  border-color: #004182;
+  background-color: #004182;
+}
+
+a.hero__social-link--github {
+  border-color: #24292f;
+  background-color: #24292f;
+  color: #fff;
+}
+
+a.hero__social-link--github:hover {
+  border-color: #3b4148;
+  background-color: #3b4148;
+}
+
+.hero__social-link--github img {
+  filter: brightness(0) invert(1);
 }
 
 .hero__button {
@@ -554,8 +587,8 @@ button:focus-visible {
 .hero__social-link .social-link {
   display: block;
   margin-right: 0;
-  width: 50px;
-  height: 50px;
+  width: 1.5rem;
+  height: 1.5rem;
   object-fit: contain;
 }
 
@@ -783,12 +816,14 @@ button:focus-visible {
 
   .mobile-menu__socials {
     display: flex;
-    flex-direction: row;
-    gap: 1em;
-    justify-content: center;
-    .mobile-menu__social-link {
-      width:35px;
-    }
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .mobile-menu__socials .hero__social-link {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
   }
 }
 
@@ -891,8 +926,7 @@ button:focus-visible {
   }
 
   .main-nav .social-link,
-  .mobile-menu__social-link,
-  .hero__social-link img {
+  .mobile-menu__social-link {
     filter: brightness(1.5);
   }
 
