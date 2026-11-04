@@ -511,15 +511,61 @@ button:focus-visible {
   padding-block: 1em;
   justify-content: center;
 
-  .profile-image {
+  .profile-image-frame { 
+    position: relative;
     width: var(--profile-image-size);
     height: var(--profile-image-size);
-    box-sizing: border-box;
     flex: 0 0 var(--profile-image-size);
+    border-radius: 50%;
+    box-shadow: 0 0.75rem 2rem rgb(20 24 35 / 18%);
+  }
+
+  .profile-image-frame::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: conic-gradient(
+      #d52d00 0deg,
+      #ef7627 51deg,
+      #ff9a56 102deg,
+      #fff 154deg,
+      #d162a4 206deg,
+      #b55690 257deg,
+      #a30262 309deg,
+      #d52d00 360deg
+    );
+    content: "";
+    animation: sapphic-ring-spin 8s linear infinite;
+  }
+
+  .profile-image-frame::after {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: conic-gradient(
+      #5bcefa 0deg,
+      #f5a9b8 90deg,
+      #fff 180deg,
+      #f5a9b8 270deg,
+      #5bcefa 360deg
+    );
+    content: "";
+    opacity: 0;
+    animation: sapphic-ring-spin 8s linear infinite,
+      trans-flag-fade 6s ease-in-out infinite alternate;
+  }
+
+  .profile-image {
+    position: absolute;
+    inset: 5px;
+    z-index: 1;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    box-sizing: border-box;
     aspect-ratio: 1;
     border-radius: 50%;
-    border: 4px solid var(--surface-bg);
-    box-shadow: 0 0.75rem 2rem rgb(20 24 35 / 18%);
     object-fit: cover;
     object-position: center;
   }
@@ -548,6 +594,18 @@ button:focus-visible {
       color: var(--muted-color);
       font-size: 15px;
     }
+  }
+}
+
+@keyframes sapphic-ring-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes trans-flag-fade {
+  to {
+    opacity: 1;
   }
 }
 
