@@ -309,7 +309,7 @@ button:focus-visible {
   padding: 1em;
 }
 
-.resume-button {
+.cv-button {
   display: flex;
   flex-direction: row;
   padding:.5em;
