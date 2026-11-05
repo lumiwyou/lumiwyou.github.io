@@ -1285,6 +1285,11 @@ a.hero__social-link--github:hover {
 }
 
 @media (max-width: 480px) {
+  .section--hero .hero {
+    gap: 0.5rem;
+    padding-block: 0.25rem;
+  }
+
   .hero__actions {
     width: 100%;
     flex-direction: column;
@@ -1314,18 +1319,21 @@ a.hero__social-link--github:hover {
 
   .hero__primary-actions {
     width: 100%;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
     gap: 0.4rem;
   }
 
   .hero__link {
-    width: 100%;
+    width: auto;
+    flex: 1 1 calc(50% - 0.2rem);
   }
 
   .hero__button {
     width: 100%;
     min-width: 0;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.9rem;
   }
 
 }
@@ -1339,7 +1347,7 @@ a.hero__social-link--github:hover {
   }
 
   .hero {
-    --profile-image-size: min(calc(100vw - 2rem), 250px);
+    --profile-image-size: clamp(110px, 20svh, 160px);
   }
 
   .certificate-list {
@@ -1615,13 +1623,39 @@ a.hero__social-link--github:hover {
   }
 }
 
+@media (max-width: 380px) {
+  .hero .hero__meta {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .page-header__content {
     padding-right: 0;
   }
 
+  .section--hero {
+    height: calc(100vh - var(--header-height));
+    height: calc(100svh - var(--header-height));
+    min-height: 0;
+    padding-bottom: 0.75rem;
+  }
+
+  .section--hero .section__title h1 {
+    margin: 0;
+    padding-block: 0.35em;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+  }
+
   .section--hero .hero {
-    padding-top: clamp(2.5rem, 8vh, 4rem);
+    gap: clamp(0.5rem, 2svh, 1rem);
+    padding-block: clamp(0.5rem, 2svh, 1rem);
+  }
+
+  .section--hero .hero__content {
+    flex: 0 1 auto;
+    width: min(100%, 36rem);
+    padding: 0;
   }
 
   .mobile-menu-toggle {
