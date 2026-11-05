@@ -90,6 +90,10 @@ body {
 }
 
 button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   border: 1px solid var(--border-subtle);
   border-radius: var(--button-radius);
   padding: var(--button-padding);
@@ -97,6 +101,7 @@ button {
   color: var(--text-color);
   font-family: inherit;
   font-weight: 600;
+  text-align: center;
   box-shadow: var(--button-shadow);
   cursor: pointer;
   transition: var(--button-transition);
@@ -506,6 +511,7 @@ button:focus-visible {
 #skillset .skill-list li {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   padding: 0.4rem 0.7rem;
   border: 1px solid var(--border-subtle);
@@ -514,6 +520,7 @@ button:focus-visible {
   color: var(--text-color);
   font-size: 0.9rem;
   line-height: 1.35;
+  text-align: center;
 }
 
 #skillset .skill-list li i,
@@ -1128,8 +1135,9 @@ a.hero__social-link--github:hover {
     }
 
     .hero__button {
-      display: inline-block;
+      display: inline-flex;
       width: 100%;
+      justify-content: center;
     }
 
     .social-link {
