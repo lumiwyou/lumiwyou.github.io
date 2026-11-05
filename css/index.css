@@ -448,11 +448,60 @@ button:focus-visible {
 }
 
 .biography-card {
+  position: relative;
+  z-index: 1;
   background-color: var(--letter-bg);
-  padding: 2em;
+  padding: clamp(2rem, 4vw, 3.5rem);
   border: 1px solid var(--page-border);
   border-radius: 1.25rem;
   box-shadow: var(--card-shadow);
+}
+
+.biography-card h2 {
+  margin-top: 0;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.biography-card p {
+  max-width: 42rem;
+  color: var(--muted-color);
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.75;
+}
+
+.biography-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 1.5rem;
+  min-height: min(62vh, 34rem);
+}
+
+.biography-card__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.biography-map {
+  height: 100%;
+  min-height: 28rem;
+  overflow: hidden;
+  border-radius: 1.25rem;
+  opacity: 0.78;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 34%);
+  mask-image: linear-gradient(90deg, transparent, #000 34%);
+}
+
+.biography-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border: 0;
+  filter: saturate(0.65);
+  pointer-events: none;
 }
 
 #biography .section__content {
@@ -463,6 +512,38 @@ button:focus-visible {
 
 #biography {
   padding-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .biography-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    min-height: auto;
+  }
+
+  .biography-map {
+    order: -1;
+    height: 14rem;
+    min-height: 0;
+    border: 1px solid var(--page-border);
+    border-bottom: 0;
+    border-radius: 1.25rem 1.25rem 0 0;
+    background-color: var(--letter-bg);
+    opacity: 1;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .biography-map iframe {
+    min-height: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 38%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 38%, transparent 100%);
+  }
+
+  .biography-card {
+    border-top: 0;
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
 }
 
 .certificate-list {
@@ -1141,6 +1222,47 @@ a.hero__social-link--github:hover {
 }
 
 @media (max-width: 620px) {
+  .biography-map {
+    height: 9rem;
+  }
+
+  .biography-card {
+    padding: clamp(0.875rem, 4vw, 1.25rem);
+  }
+
+  .biography-card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .biography-card p {
+    margin-block: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  .biography-card__socials {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .biography-card__socials .hero__social-link {
+    min-width: 0;
+    flex: 1 1 0;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .biography-card__socials .hero__social-link img {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 auto;
+  }
+
   .certificate-list {
     .certificate-item {
       flex-direction: column;
