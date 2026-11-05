@@ -825,9 +825,9 @@ a.hero__social-link--github:hover {
 
 .page-footer {
   margin-top: auto;
-  background-color: #161b22;
+  background-color: #334155;
   padding-block: 1.5rem 1rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid #475569;
   color: #fff;
   text-align: start;
 }
@@ -878,9 +878,9 @@ a.hero__social-link--github:hover {
 
 .page-footer__copyright {
   padding-top: 0.9rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid #64748b;
   margin: 0;
-  color: rgb(255 255 255 / 70%);
+  color: #fff;
   font-size: 0.9rem;
 }
 
@@ -1193,6 +1193,10 @@ a.hero__social-link--github:hover {
   .section--tertiary {
     background-color: var(--surface-bg);
     color: var(--text-color);
+  }
+
+  .page-footer {
+    border-top-color: #334155;
   }
 
   .section .section__title,
