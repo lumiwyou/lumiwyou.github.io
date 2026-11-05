@@ -660,12 +660,26 @@ button:focus-visible {
   }
 
   .hero__content {
+    position: relative;
+    isolation: isolate;
     flex: 0 1 36rem;
     width: min(100%, 36rem);
     min-width: 0;
     box-sizing: border-box;
-    padding: 1em;
-    background-color: var(--surface-bg);
+    padding: 1.5rem;
+
+    &::before {
+      position: absolute;
+      inset: -1rem;
+      z-index: -1;
+      background-color: var(--surface-bg);
+      mask-image:
+        linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+        linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+      mask-composite: intersect;
+      content: "";
+      pointer-events: none;
+    }
 
     h2,
     h3 {
