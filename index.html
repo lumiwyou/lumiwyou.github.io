@@ -420,6 +420,24 @@
             <span class="next-section-button__label">Next section</span>
             <span class="next-section-button__icon" aria-hidden="true"></span>
         </button>
+        <aside class="command-assistant" aria-label="Portfolio assistant">
+            <form class="command-assistant__form" role="search">
+                <label class="visually-hidden" for="assistant-command">
+                    Ask the portfolio assistant
+                </label>
+                <button class="command-assistant__toggle" type="button"
+                    aria-label="Open assistant command bar"
+                    aria-expanded="false" aria-controls="assistant-command">
+                    <span class="command-assistant__orb"
+                        aria-hidden="true"></span>
+                </button>
+                <input id="assistant-command" class="command-assistant__input"
+                    type="text" autocomplete="off"
+                    placeholder="Ask or go somewhere…" required>
+            </form>
+            <p class="command-assistant__response" role="status"
+                aria-live="polite" hidden></p>
+        </aside>
         <script>
         const sections = Array.from(document.querySelectorAll("main > .section"));
         const nextSectionButton = document.querySelector(".next-section-button");
@@ -479,6 +497,123 @@
                     : "smooth",
                 block: "start"
             });
+        });
+
+        const assistant = document.querySelector(".command-assistant");
+        const assistantForm = assistant.querySelector(
+            ".command-assistant__form"
+        );
+        const assistantInput = assistant.querySelector(
+            ".command-assistant__input"
+        );
+        const assistantToggle = assistant.querySelector(
+            ".command-assistant__toggle"
+        );
+        const assistantResponse = assistant.querySelector(
+            ".command-assistant__response"
+        );
+
+        function setAssistantOpen(isOpen) {
+            assistant.classList.toggle("is-open", isOpen);
+            assistantToggle.setAttribute("aria-expanded", String(isOpen));
+            assistantToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close assistant command bar" : "Open assistant command bar"
+            );
+
+            const focusTarget = isOpen ? assistantInput : assistantToggle;
+            focusTarget.focus({ preventScroll: true });
+        }
+
+        function navigateToSection(sectionId, message) {
+            const section = document.getElementById(sectionId);
+            if (!section) {
+                assistantResponse.textContent =
+                    `The requested section "${sectionId}" was not found.`;
+                assistantResponse.hidden = false;
+                return;
+            }
+
+            section.scrollIntoView({
+                behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                    ? "auto"
+                    : "smooth",
+                block: "start"
+            });
+            assistantResponse.textContent = message;
+            assistantResponse.hidden = false;
+        }
+
+        function handleLocalAssistantCommand(command) {
+            const normalizedCommand = command.trim().toLowerCase();
+            const destinations = [
+                { match: /\b(about|bio|biography)\b/, id: "about", label: "About" },
+                { match: /\b(portfolio|projects?)\b/, id: "portfolio", label: "Portfolio" },
+                { match: /\b(contact|email)\b/, id: "contact", label: "Contact" },
+                { match: /\b(certificates?|certifications?)\b/, id: "certificates", label: "Certificates" },
+                { match: /\b(cv|resume|curriculum vitae)\b/, id: "cv", label: "Curriculum Vitae" }
+            ];
+            const destination = destinations.find(({ match }) =>
+                match.test(normalizedCommand)
+            );
+
+            if (destination) {
+                navigateToSection(
+                    destination.id,
+                    `Taking you to ${destination.label}.`
+                );
+                return true;
+            }
+
+            if (/^(help|commands?|\?)$/.test(normalizedCommand)) {
+                assistantResponse.textContent =
+                    "Try: About, Portfolio, Contact, Certificates, or CV.";
+                assistantResponse.hidden = false;
+                return true;
+            }
+
+            return false;
+        }
+
+        async function requestAssistantResponse(prompt) {
+            // Replace this placeholder with a request to the assistant endpoint.
+            throw new Error("The assistant service is not connected yet.");
+        }
+
+        assistantToggle.addEventListener("click", () => {
+            const isOpening = !assistant.classList.contains("is-open");
+            setAssistantOpen(isOpening);
+        });
+
+        assistant.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && assistant.classList.contains("is-open")) {
+                event.preventDefault();
+                setAssistantOpen(false);
+                assistantToggle.focus({ preventScroll: true });
+            }
+        });
+
+        assistantForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const prompt = assistantInput.value.trim();
+            if (!prompt) {
+                assistantInput.focus();
+                return;
+            }
+
+            const handledLocally = handleLocalAssistantCommand(prompt);
+            if (!handledLocally) {
+                try {
+                    assistantResponse.textContent =
+                        await requestAssistantResponse(prompt);
+                    assistantResponse.hidden = false;
+                } catch (error) {
+                    assistantResponse.textContent = error instanceof Error
+                        ? error.message
+                        : "The assistant request failed.";
+                    assistantResponse.hidden = false;
+                }
+            }
         });
 
         updateNextSectionButton();
