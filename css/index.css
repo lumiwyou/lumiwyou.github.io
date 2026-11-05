@@ -1274,6 +1274,10 @@ a.hero__social-link--github:hover {
     padding-right: 0;
   }
 
+  .section--hero .hero {
+    padding-top: clamp(2.5rem, 8vh, 4rem);
+  }
+
   .mobile-menu-toggle {
     display: flex;
   }
