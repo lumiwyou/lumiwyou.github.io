@@ -4,6 +4,10 @@
   --accent-hue: 215; 
   --button-bg: #e9e9ed;
   --button-bg-hover: #f2f2f5;
+  --button-radius: 999px;
+  --button-padding: 0.75rem 1.25rem;
+  --button-transition: background-color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
   --button-shadow:
     0 0.2rem 0.45rem rgb(20 24 35 / 14%),
     inset 0 1px rgb(255 255 255 / 85%);
@@ -87,15 +91,15 @@ body {
 
 button {
   border: 1px solid var(--border-subtle);
-  border-radius: 0.75rem;
-  padding: 1rem;
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
   background-color: var(--button-bg);
   color: var(--text-color);
   font-family: inherit;
+  font-weight: 600;
   box-shadow: var(--button-shadow);
   cursor: pointer;
-  transition: background-color 160ms ease, border-color 160ms ease,
-    box-shadow 160ms ease, transform 160ms ease;
+  transition: var(--button-transition);
 }
 button:hover {
   border-color: var(--highlight-color);
@@ -887,14 +891,14 @@ a.hero__social-link--github:hover {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.75rem 1.25rem;
+  padding: var(--button-padding);
   border: 1px solid var(--highlight-color);
-  border-radius: 999px;
+  border-radius: var(--button-radius);
   background-color: var(--highlight-color);
   color: var(--surface-bg);
   font-weight: 700;
   text-decoration: none;
-  transition: box-shadow 160ms ease, transform 160ms ease;
+  transition: var(--button-transition);
 }
 
 .cv-card__button:hover,
