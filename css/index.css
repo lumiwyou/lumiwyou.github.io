@@ -1250,6 +1250,11 @@ a.hero__social-link--github:hover {
     filter: hue-rotate(calc(var(--accent-hue) * 1deg - 34deg))
       brightness(2.4) saturate(1.2);
   }
+
+  .page-header .site-logo,
+  .page-header .main-nav__socials .social-link {
+    filter: brightness(0) invert(1);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
