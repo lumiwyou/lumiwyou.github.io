@@ -3,11 +3,10 @@
   --header-height: 80px;
   --accent-hue: 215; 
   --button-bg: #e9e9ed;
-  --button-bg-hover: #f2f2f5;
   --button-radius: 999px;
   --button-padding: 0.75rem 1.25rem;
-  --button-transition: background-color 160ms ease, border-color 160ms ease,
-    box-shadow 160ms ease, transform 160ms ease;
+  --button-transition: border-color 180ms ease, box-shadow 180ms ease,
+    color 180ms ease;
   --button-shadow:
     0 0.2rem 0.45rem rgb(20 24 35 / 14%),
     inset 0 1px rgb(255 255 255 / 85%);
@@ -89,7 +88,67 @@ body {
   background-color: var(--surface-bg);
 }
 
-button {
+button:not(.mobile-menu-toggle),
+.cv-card__button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+button:not(.mobile-menu-toggle)::before,
+.cv-card__button::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--highlight-color);
+  content: "";
+  pointer-events: none;
+  transform: translateX(-101%);
+  transition: transform 220ms ease;
+}
+
+button:not(.mobile-menu-toggle)::after,
+.cv-card__button::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--surface-bg) 45%, transparent) 0%,
+    color-mix(in srgb, var(--surface-bg) 30%, transparent) 38%,
+    transparent 72%
+  );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cv-card__button::after {
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--highlight-color) 45%, transparent) 0%,
+    color-mix(in srgb, var(--highlight-color) 30%, transparent) 38%,
+    transparent 72%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button:not(.mobile-menu-toggle),
+  .cv-card__button,
+  button:not(.mobile-menu-toggle)::before,
+  .cv-card__button::before {
+    transition: none;
+  }
+
+  button:not(.mobile-menu-toggle):active::after,
+  .cv-card__button:active::after {
+    animation: none;
+  }
+}
+
+button:not(.mobile-menu-toggle) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -106,21 +165,39 @@ button {
   cursor: pointer;
   transition: var(--button-transition);
 }
-button:hover {
+button:not(.mobile-menu-toggle):hover,
+button:not(.mobile-menu-toggle):focus-visible {
   border-color: var(--highlight-color);
-  background-color: var(--button-bg-hover);
-  box-shadow:
-    0 0.35rem 0.7rem rgb(20 24 35 / 18%),
-    inset 0 1px rgb(255 255 255 / 85%);
-  transform: translateY(-2px);
+  color: var(--surface-bg);
 }
-button:active {
+
+button:not(.mobile-menu-toggle):hover::before,
+button:not(.mobile-menu-toggle):focus-visible::before {
+  transform: translateX(0);
+}
+
+button:not(.mobile-menu-toggle):active::after,
+.cv-card__button:active::after {
+  animation: button-puddle 420ms ease-out;
+}
+
+button:not(.mobile-menu-toggle):active {
   box-shadow: inset 0 2px 4px rgb(20 24 35 / 18%);
-  transform: translateY(0);
 }
 button:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--highlight-color) 45%, transparent);
   outline-offset: 3px;
+}
+
+@keyframes button-puddle {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.15);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
 }
 
 .content-column {
@@ -908,11 +985,19 @@ a.hero__social-link--github:hover {
   transition: var(--button-transition);
 }
 
+.cv-card__button::before {
+  background-color: var(--surface-bg);
+}
+
 .cv-card__button:hover,
 .cv-card__button:focus-visible {
-  color: var(--surface-bg);
-  box-shadow: var(--card-shadow-hover);
-  transform: translateY(-2px);
+  border-color: var(--highlight-color);
+  color: var(--highlight-color);
+}
+
+.cv-card__button:hover::before,
+.cv-card__button:focus-visible::before {
+  transform: translateX(0);
 }
 
 .cv-card__button-icon {
@@ -998,11 +1083,11 @@ a.hero__social-link--github:hover {
 }
 
 .next-section-button:hover {
-  transform: translate(-50%, -2px);
+  transform: translateX(-50%);
 }
 
 .next-section-button:active {
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
 }
 
 .next-section-button[hidden] {
@@ -1274,7 +1359,6 @@ a.hero__social-link--github:hover {
   :root {
     color-scheme: dark;
     --button-bg: #253247;
-    --button-bg-hover: #33445e;
     --button-shadow:
       0 0.2rem 0.45rem rgb(0 0 0 / 35%),
       inset 0 1px rgb(255 255 255 / 8%);
@@ -1293,12 +1377,6 @@ a.hero__social-link--github:hover {
     --text-color: #e2e8f0;
     --muted-color: #a8b3c2;
     --link-color: hsl(var(--accent-hue) 85% 80%);
-  }
-
-  button:hover {
-    box-shadow:
-      0 0.35rem 0.7rem rgb(0 0 0 / 45%),
-      inset 0 1px rgb(255 255 255 / 8%);
   }
 
   .page-header,
