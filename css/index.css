@@ -203,12 +203,11 @@ button:focus-visible {
     padding: 0.5em;
   }
 
-  .main-nav__linkedin .social-link {
-    filter: hue-rotate(calc(var(--accent-hue) * 1deg - 210deg));
-  }
-
+  .main-nav__linkedin .social-link,
   .main-nav__github .social-link {
-    filter: hue-rotate(calc(var(--accent-hue) * 1deg - 34deg));
+    filter: brightness(0) saturate(100%) invert(28%) sepia(96%)
+      saturate(1700%) hue-rotate(calc(var(--accent-hue) * 1deg - 34deg))
+      brightness(88%) contrast(101%);
   }
 }
 
