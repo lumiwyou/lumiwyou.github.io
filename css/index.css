@@ -247,6 +247,10 @@ button:focus-visible {
   height: auto;
 }
 
+#certificates {
+  padding-bottom: 0;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -769,6 +773,7 @@ a.hero__social-link--github:hover {
 }
 
 .page-footer {
+  margin-top: auto;
   background-color: var(--surface-bg);
   padding-block: 1em;
   border-top: 1px solid var(--page-border);
