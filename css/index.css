@@ -1290,6 +1290,28 @@ a.hero__social-link--github:hover {
     flex-direction: column;
   }
 
+  .hero__secondary-actions {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .hero__secondary-actions .hero__social-link {
+    min-width: 0;
+    flex: 1 1 0;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .hero__secondary-actions .hero__social-link img {
+    width: 1.15rem;
+    height: 1.15rem;
+    flex: 0 0 auto;
+  }
+
   .hero__primary-actions {
     width: 100%;
     flex-direction: column;
