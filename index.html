@@ -373,25 +373,7 @@
                 <p>Copyright &copy; Lumi Hyväri</p>
             </div>
         </footer>
-        <dialog class="site-notice"
-            aria-labelledby="site-notice-title">
-            <h2 id="site-notice-title">Dark theme in development</h2>
-            <p>The dark theme is still in development. Some parts of this site
-                may not display as intended.</p>
-            <button type="button" id="site-notice-close">Close</button>
-        </dialog>
         <script>
-        const siteNotice = document.querySelector(".site-notice");
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-        if (prefersDarkScheme.matches) {
-            siteNotice.showModal();
-        }
-
-        document.querySelector("#site-notice-close").addEventListener("click", () => {
-            siteNotice.close();
-        });
-
         // DEBUG: Remove this listener with the accent picker before production.
         document.querySelector("#debug-accent-color").addEventListener("input", (event) => {
             const color = event.target.value;
@@ -416,12 +398,6 @@
             const accentHue = Math.round((hue + 360) % 360);
             document.documentElement.style.setProperty("--accent-hue", String(accentHue));
             document.querySelector("#debug-accent-degrees").textContent = `${accentHue}°`;
-        });
-
-        siteNotice.addEventListener("click", (event) => {
-            if (event.target === siteNotice) {
-                siteNotice.close();
-            }
         });
 
         const sections = Array.from(document.querySelectorAll("main > .section"));

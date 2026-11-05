@@ -909,31 +909,6 @@ a.hero__social-link--github:hover {
   }
 }
 
-.site-notice {
-  max-width: 28rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border-accent);
-  color: #212121;
-  background: #fff;
-  box-shadow: 0 1rem 3rem rgb(0 0 0 / 25%);
-}
-
-.site-notice::backdrop {
-  background: rgb(0 0 0 / 60%);
-}
-
-.site-notice h2 {
-  margin-top: 0;
-}
-
-.site-notice button {
-  padding: 0.6rem 1rem;
-  border: 0;
-  color: #fff;
-  background: #705d43;
-  cursor: pointer;
-}
-
 .mobile-menu {
   position: fixed;
   top: var(--header-height);
@@ -1098,18 +1073,6 @@ a.hero__social-link--github:hover {
 
   #skillset .skill-logo {
     filter: invert(1);
-  }
-
-  .site-notice {
-    border-color: var(--border-accent);
-    color: var(--text-color);
-    background-color: var(--letter-bg);
-  }
-
-  .site-notice button {
-    border-color: var(--highlight-color);
-    color: #161b22;
-    background-color: var(--highlight-color);
   }
 
   .site-logo {
