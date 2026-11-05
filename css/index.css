@@ -1302,8 +1302,78 @@ a.hero__social-link--github:hover {
 }
 
 @media (max-width: 620px) {
+  #portfolio {
+    height: calc(100vh - var(--header-height));
+    height: calc(100svh - var(--header-height));
+    min-height: 0;
+    padding-bottom: 0.75rem;
+  }
+
+  #portfolio .section__title h1 {
+    margin: 0;
+    padding-block: 0.35rem;
+    font-size: 1.2rem;
+  }
+
+  #portfolio .section__content {
+    min-height: 0;
+  }
+
+  #portfolio .section__content > .content-column {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .project-intro h2 {
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
+  }
+
+  .project-intro > p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
   .project-catalog {
+    flex: 1;
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    min-height: 0;
+    margin-top: 0.75rem;
+  }
+
+  .project-catalog .project-card {
+    min-height: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0.9rem;
+  }
+
+  .project-card__category {
+    margin-bottom: 0.35rem;
+    font-size: 0.65rem;
+  }
+
+  .project-card h3 {
+    margin-bottom: 0.25rem;
+    font-size: 1.2rem;
+  }
+
+  .project-card__description {
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.35;
+  }
+
+  .project-card__number {
+    top: 0.4rem;
+    right: 0.75rem;
+    font-size: 2.5rem;
+  }
+
+  .project-card__link {
+    font-size: 0.85rem;
   }
 
   .biography-map {
