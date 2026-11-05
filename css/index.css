@@ -148,23 +148,19 @@ button:focus-visible {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.2rem;
+  gap: clamp(1rem, 2.2vw, 2rem);
   height: 100%;
-  padding: 1em;
+  padding-inline: 1rem;
 
-  .nav-button {
+  .main-nav__link {
+    position: relative;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    box-sizing: content-box;
     gap: 0.4em;
-    border: 0;
-    border-radius: 0;
-    padding: 1em;
-    background: none;
-    height: 50px;
-    position: relative;
-    box-shadow: none;
+    padding-block: 0.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
     transition: color 160ms ease;
 
     img {
@@ -174,33 +170,60 @@ button:focus-visible {
 
     &::after {
       position: absolute;
-      right: 1em;
-      bottom: 0.5rem;
-      left: 1em;
-      height: 2px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
       background-color: var(--highlight-color);
       content: "";
       transform: scaleX(0);
-      transform-origin: left;
+      transform-origin: center;
       transition: transform 180ms ease;
     }
   }
-  .nav-button:hover {
-    border-color: transparent;
-    background-color: transparent;
-    box-shadow: none;
+
+  .main-nav__link:hover,
+  .main-nav__link:focus-visible {
     color: var(--highlight-color);
-    transform: none;
   }
 
-  .nav-button:hover::after,
-  .nav-button:focus-visible::after {
+  .main-nav__link:hover::after,
+  .main-nav__link:focus-visible::after {
     transform: scaleX(1);
   }
 
-  .social-link {
-    height: 35px;
-    padding: 0.5em;
+  .main-nav__socials {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 0.25rem;
+    padding-left: 1rem;
+    border-left: 1px solid var(--page-border);
+  }
+
+  .main-nav__socials > a {
+    display: inline-flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: 0 0 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 160ms ease, transform 160ms ease;
+  }
+
+  .main-nav__socials > a:hover,
+  .main-nav__socials > a:focus-visible {
+    background-color: var(--color-alpha);
+    transform: translateY(-1px);
+  }
+
+  .main-nav__socials .social-link {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    object-fit: contain;
   }
 
   .main-nav__linkedin .social-link,
@@ -1124,12 +1147,12 @@ a.hero__social-link--github:hover {
     color: var(--muted-color);
   }
 
-  .nav-button {
+  .main-nav__link {
     color: var(--text-color);
   }
 
-  .nav-button:hover {
-    background-color: transparent;
+  .main-nav__link:hover,
+  .main-nav__link:focus-visible {
     color: var(--highlight-color);
   }
 

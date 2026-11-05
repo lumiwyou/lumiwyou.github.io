@@ -59,25 +59,23 @@
             <div class="content-column page-header__content">
                 <img class="site-logo" src="img/logo.svg" draggable="false"
                     alt="Lumi's Portfolio Logo">
-                <nav class="main-nav">
-                    <a href="#about" aria-label="About"><button
-                            class="nav-button">About</button></a>
-                    <a href="#portfolio" aria-label="Portfolio"><button
-                            class="nav-button">Portfolio</button></a>
-                    <a href="#contact" aria-label="Contact"><button
-                            class="nav-button">Contact</button></a>
-                    <a href="doc/cv.pdf" aria-label="CV"><button
-                            class="nav-button"><img
-                                src="img/pdf.svg" alt>Read my CV</button></a>
-                    <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
-                        aria-label="Link to my LinkedIn"
-                        class="main-nav__linkedin"><img
-                            class="social-link"
-                            src="img/linkedin-header.svg" alt="LinkedIn"></a>
-                    <a href="https://github.com/lumiwyou"
-                        aria-label="Link to my Github"
-                        class="main-nav__github"><img class="social-link"
-                            src="img/github.svg" alt="Github"></a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a class="main-nav__link" href="#about">About</a>
+                    <a class="main-nav__link" href="#portfolio">Portfolio</a>
+                    <a class="main-nav__link" href="#contact">Contact</a>
+                    <a class="main-nav__link main-nav__link--cv"
+                        href="doc/cv.pdf"><img src="img/pdf.svg" alt>Read my CV</a>
+                    <div class="main-nav__socials">
+                        <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                            aria-label="Link to my LinkedIn"
+                            class="main-nav__linkedin"><img
+                                class="social-link"
+                                src="img/linkedin-header.svg" alt="LinkedIn"></a>
+                        <a href="https://github.com/lumiwyou"
+                            aria-label="Link to my Github"
+                            class="main-nav__github"><img class="social-link"
+                                src="img/github.svg" alt="Github"></a>
+                    </div>
                 </nav>
                 <button class="mobile-menu-toggle"><img src="img/menu.svg"
                         alt="Menu"></button>
