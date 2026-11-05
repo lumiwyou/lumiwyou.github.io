@@ -657,6 +657,7 @@ button:focus-visible {
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
+    filter: grayscale();
   }
 
   .hero__content {
