@@ -607,10 +607,10 @@ button:focus-visible {
 
   .profile-image {
     position: absolute;
-    inset: 5px;
+    inset: 10px;
     z-index: 1;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     box-sizing: border-box;
     aspect-ratio: 1;
     border-radius: 50%;
