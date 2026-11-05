@@ -177,28 +177,47 @@
             <section class="section section--tertiary" id="biography">
                 <div class="section__content">
                     <div class="content-column">
-                        <div class="biography-card">
-                            <h2>Biography</h2>
-                            <p>
-                                🔐 Security Awareness. 💻 Software Development.
-                                📫 Open-mindedness.
-                                <br><br>
-                                I am proficient in software engineering using
-                                Javascript, C/C++, and Python. Currently, I am
-                                studying Javascript Fullstack Engineering @ Chas
-                                Academy to further specialize and formalize upon
-                                my prior personal experience using Typescript,
-                                Bootstrap, HTML/CSS, Docker, Node.js,
-                                Express.js, MySQL, and more.
-                                <br><br>
-                                I am also enthusiastic about Linux system
-                                internals and have prior personal experience in
-                                system administration. In my spare time I
-                                research into different topics such as
-                                cyber-security and how software and hardware
-                                work. I have found an artistic joy in digital
-                                design creation using Affinity Design.
-                            </p>
+                        <div class="biography-layout">
+                            <article class="biography-card">
+                                <h2>About me</h2>
+                                <p>
+                                    Based in Stockholm, I’m studying Fullstack
+                                    JavaScript Engineering at Chas Academy. I
+                                    build with JavaScript and TypeScript and
+                                    have experience with Node.js, Express,
+                                    MySQL, HTML, and CSS, alongside a
+                                    foundation in C/C++ and Python.
+                                </p>
+                                <p>
+                                    I’m interested in Linux, system
+                                    administration, and cybersecurity, and
+                                    enjoy exploring how software and hardware
+                                    work. I also create digital designs with
+                                    Affinity Designer.
+                                </p>
+                                <div class="biography-card__socials">
+                                    <a
+                                        href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
+                                        aria-label="LinkedIn: lumi-hyväri"
+                                        class="hero__social-link hero__social-link--linkedin"><img
+                                            class="social-link"
+                                            src="img/linkedin.svg"
+                                            alt=""><span>lumi-hyväri</span></a>
+                                    <a href="https://github.com/lumiwyou"
+                                        aria-label="GitHub: @lumiwyou"
+                                        class="hero__social-link hero__social-link--github"><img
+                                            class="social-link"
+                                            src="img/github.svg"
+                                            alt=""><span>@lumiwyou</span></a>
+                                </div>
+                            </article>
+                            <div class="biography-map">
+                                <iframe
+                                    title="Map showing Stockholm, Sweden"
+                                    src="https://www.openstreetmap.org/export/embed.html?bbox=17.85%2C59.22%2C18.30%2C59.43&amp;layer=mapnik&amp;marker=59.3293%2C18.0686"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,24 +230,41 @@
                 </div>
                 <div class="section__content">
                     <div class="content-column">
-                        <h2>Highlighed projects</h2>
-                        <p>Here you can find my selection of projects</p>
+                        <div class="project-intro">
+                            <h2>Selected projects</h2>
+                            <p>A few things I’ve built and explored.</p>
+                        </div>
                         <div class="project-catalog">
-                            <div class="project-card">
+                            <article class="project-card">
+                                <span class="project-card__number"
+                                    aria-hidden="true">01</span>
+                                <p class="project-card__category">C/C++ · Memory
+                                    safety</p>
                                 <h3>Safeheap</h3>
-                                <p>C/C++ Memory vulnerability mitigation
-                                    library</p>
-                                <a href="https://github.com/lumiwyou/safeheap"
-                                    aria-label="Link to my Safeheap-project"><button>Explore</button></a>
-                            </div>
-                            <div class="project-card">
+                                <p class="project-card__description">
+                                    A memory vulnerability mitigation library
+                                    for C and C++ projects.
+                                </p>
+                                <a class="project-card__link"
+                                    href="https://github.com/lumiwyou/safeheap"
+                                    aria-label="View Safeheap on GitHub">View on
+                                    GitHub</a>
+                            </article>
+                            <article class="project-card">
+                                <span class="project-card__number"
+                                    aria-hidden="true">02</span>
+                                <p class="project-card__category">Offline
+                                    documentation</p>
                                 <h3>Helpviewer</h3>
-                                <p>Microsoft Helpviewer Documentation Offline
-                                    Reader</p>
-                                <a
+                                <p class="project-card__description">
+                                    An offline reader for Microsoft Helpviewer
+                                    documentation.
+                                </p>
+                                <a class="project-card__link"
                                     href="https://github.com/lumiwyou/helpviewer-old"
-                                    aria-label="Link to my Helpviewer-project"><button>Explore</button></a>
-                            </div>
+                                    aria-label="View Helpviewer on GitHub">View on
+                                    GitHub</a>
+                            </article>
                         </div>
                     </div>
                 </div>
