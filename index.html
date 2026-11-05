@@ -65,7 +65,7 @@
                     <a class="main-nav__link" href="#contact">Contact</a>
                     <a class="main-nav__link" href="#certificates">Certificates</a>
                     <a class="main-nav__link main-nav__link--cv"
-                        href="doc/cv.pdf"><img src="img/pdf.svg" alt>Read my CV</a>
+                        href="#cv">CV</a>
                     <div class="main-nav__socials">
                         <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
                             aria-label="Link to my LinkedIn"
@@ -91,8 +91,7 @@
                 <a class="mobile-menu__button" href="#contact">Contact</a>
                 <a class="mobile-menu__button"
                     href="#certificates">Certificates</a>
-                <a class="mobile-menu__button" href="doc/cv.pdf"><img
-                        src="img/pdf.svg" alt>Read my CV</a>
+                <a class="mobile-menu__button" href="#cv">CV</a>
                 <div class="mobile-menu__socials">
                     <a href="https://www.linkedin.com/in/lumi-hyv%C3%A4ri/"
                         aria-label="LinkedIn: lumi-hyväri"
@@ -127,7 +126,7 @@
                     <div class="content-column">
                         <div class="hero">
                             <div class="profile-image-frame"> 
-                                <img class="profile-image" src="img/1.webp" draggable="false"
+                                <img class="profile-image" src="img/me.png" draggable="false"
                                     alt="Me">
                             </div>
                             <div class="hero__content">
@@ -148,11 +147,11 @@
                                             aria-label="Portfolio" class="hero__link"><button class="hero__button">Portfolio</button></a>
                                         <a href="#contact"
                                             aria-label="Contact" class="hero__link"><button class="hero__button">Contact</button></a>
-                                        <a href="doc/cv.pdf"
-                                            aria-label="CV" class="hero__link"><button
+                                        <a href="#cv"
+                                            aria-label="View my CV" class="hero__link"><button
                                                 class="hero__button"><img
                                                     src="img/pdf.svg"
-                                                    alt="PDF-file">Read my CV</button></a>
+                                                    alt="">View my CV</button></a>
                                     </div>
                                     <div class="hero__secondary-actions">
                                         <a
@@ -325,6 +324,38 @@
                     </div>
                 </div>
             </section>
+            <section class="section section--tertiary" id="cv">
+                <div class="section__title">
+                    <div class="content-column">
+                        <h1>CV</h1>
+                    </div>
+                </div>
+                <div class="section__content">
+                    <div class="content-column">
+                        <article class="cv-card">
+                            <div class="cv-preview" aria-hidden="true">
+                                <iframe src="doc/cv.pdf#toolbar=0&amp;navpanes=0"
+                                    title="Blurred CV preview"
+                                    tabindex="-1"></iframe>
+                            </div>
+                            <div class="cv-card__content">
+                                <p class="cv-card__eyebrow">Curriculum vitae</p>
+                                <h2>Lumi Hyväri</h2>
+                                <p>Explore my professional background,
+                                    experience, and technical skills in my
+                                    curriculum vitae.</p>
+                                <a class="cv-card__button" href="doc/cv.pdf"
+                                    target="_blank" rel="noopener">
+                                    <img class="cv-card__button-icon"
+                                        src="img/pdf.svg" alt=""
+                                        aria-hidden="true">
+                                    Open my CV
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
             <section class="section section--secondary" id="certificates">
                 <div class="section__title">
                     <div class="content-column">
@@ -374,7 +405,7 @@
                                 <a href="#portfolio">Portfolio</a>
                                 <a href="#contact">Contact</a>
                                 <a href="#certificates">Certificates</a>
-                                <a href="doc/cv.pdf">Read my CV</a>
+                                <a href="#cv">CV</a>
                             </nav>
                         </div>
                         <p class="page-footer__copyright">Copyright &copy;
