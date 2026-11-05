@@ -811,6 +811,10 @@ a.hero__social-link--github:hover {
   transform: translateY(-2px) rotate(45deg);
 }
 
+.next-section-button--top .next-section-button__icon {
+  transform: translateY(2px) rotate(225deg);
+}
+
 @media (max-width: 900px) {
   .hero {
     --profile-image-size: clamp(250px, 70vw, 360px);

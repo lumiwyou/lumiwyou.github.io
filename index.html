@@ -365,7 +365,7 @@
         </main>
         <button class="next-section-button" type="button"
             aria-label="Go to the next section">
-            Next section
+            <span class="next-section-button__label">Next section</span>
             <span class="next-section-button__icon" aria-hidden="true"></span>
         </button>
         <footer class="page-footer">
@@ -376,6 +376,9 @@
         <script>
         const sections = Array.from(document.querySelectorAll("main > .section"));
         const nextSectionButton = document.querySelector(".next-section-button");
+        const nextSectionButtonLabel = nextSectionButton.querySelector(
+            ".next-section-button__label"
+        );
         const header = document.querySelector(".page-header");
         let scrollUpdateScheduled = false;
 
@@ -393,8 +396,18 @@
         }
 
         function updateNextSectionButton() {
-            nextSectionButton.hidden =
-                getCurrentSectionIndex() >= sections.length - 1;
+            const isLastSection = getCurrentSectionIndex() >= sections.length - 1;
+            nextSectionButtonLabel.textContent = isLastSection
+                ? "Back to top"
+                : "Next section";
+            nextSectionButton.setAttribute(
+                "aria-label",
+                isLastSection ? "Back to top" : "Go to the next section"
+            );
+            nextSectionButton.classList.toggle(
+                "next-section-button--top",
+                isLastSection
+            );
             scrollUpdateScheduled = false;
         }
 
@@ -408,15 +421,17 @@
         window.addEventListener("resize", updateNextSectionButton);
 
         nextSectionButton.addEventListener("click", () => {
-            const nextSection = sections[getCurrentSectionIndex() + 1];
-            if (nextSection) {
-                nextSection.scrollIntoView({
-                    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
-                        ? "auto"
-                        : "smooth",
-                    block: "start"
-                });
-            }
+            const currentIndex = getCurrentSectionIndex();
+            const targetSection =
+                currentIndex >= sections.length - 1
+                    ? sections[0]
+                    : sections[currentIndex + 1];
+            targetSection?.scrollIntoView({
+                behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                    ? "auto"
+                    : "smooth",
+                block: "start"
+            });
         });
 
         updateNextSectionButton();
