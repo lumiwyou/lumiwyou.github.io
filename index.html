@@ -504,6 +504,25 @@
         const header = document.querySelector(".page-header");
         let scrollUpdateScheduled = false;
 
+        const sectionTitleObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle(
+                    "is-glossing",
+                    entry.isIntersecting
+                );
+            });
+        }, {
+            rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+            threshold: 0.1
+        });
+
+        sections.forEach((section) => {
+            const title = section.querySelector(".section__title");
+            if (title) {
+                sectionTitleObserver.observe(title);
+            }
+        });
+
         function getCurrentSectionIndex() {
             const headerBottom = header.getBoundingClientRect().bottom;
             let currentIndex = 0;

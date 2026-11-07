@@ -373,7 +373,10 @@ button:focus-visible {
   content: "";
   pointer-events: none;
   transform: translateX(-100%);
-  animation: section-title-gloss 8s ease-in-out infinite;
+}
+
+.section .section__title.is-glossing::after {
+  animation: section-title-gloss 900ms ease-in-out both;
 }
 
 .section .section__title > .content-column {
@@ -385,7 +388,6 @@ button:focus-visible {
   0% {
     transform: translateX(-100%);
   }
-  22%,
   100% {
     transform: translateX(100%);
   }
@@ -847,11 +849,15 @@ button:focus-visible {
 
   .profile-image-frame { 
     position: relative;
+    isolation: isolate;
     width: var(--profile-image-size);
     height: var(--profile-image-size);
     flex: 0 0 var(--profile-image-size);
     border-radius: 50%;
-    box-shadow: 0 0.75rem 2rem rgb(20 24 35 / 18%);
+    background-color: var(--surface-bg);
+    box-shadow:
+      0 0.75rem 2rem rgb(20 24 35 / 18%),
+      0 0 1.5rem color-mix(in srgb, var(--highlight-color) 20%, transparent);
   }
 
   .profile-image-frame::before {
@@ -903,6 +909,10 @@ button:focus-visible {
     object-fit: cover;
     object-position: center;
     filter: grayscale();
+    border: 2px solid var(--surface-bg);
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 24%),
+      0 0.4rem 1rem rgb(0 0 0 / 18%);
   }
 
   .hero__content {
@@ -1886,8 +1896,8 @@ button.next-section-button {
     transform: none;
   }
 
-  .section .section__title::after {
-    animation: none;
+  .section .section__title.is-glossing::after {
+    animation: none !important;
     visibility: hidden;
   }
 }
