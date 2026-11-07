@@ -1228,7 +1228,7 @@ a.hero__social-link--github:hover {
   font-size: 0.9rem;
 }
 
-.next-section-button {
+button.next-section-button {
   position: fixed;
   bottom: calc(1rem + env(safe-area-inset-bottom));
   left: 50vw;
