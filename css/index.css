@@ -403,6 +403,11 @@ button:focus-visible {
   padding-bottom: 0;
 }
 
+#certificates .section__content {
+  box-sizing: border-box;
+  padding-top: clamp(1.25rem, 3vh, 2rem);
+}
+
 #cv .section__content {
   padding-top: clamp(2rem, 6vh, 4rem);
 }
