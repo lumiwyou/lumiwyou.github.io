@@ -352,6 +352,45 @@ button:focus-visible {
   background-color: var(--color-alpha);
 }
 
+.section .section__title {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.section .section__title::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 36%,
+    rgb(255 255 255 / 4%) 44%,
+    rgb(255 255 255 / 24%) 50%,
+    rgb(255 255 255 / 4%) 56%,
+    transparent 64%
+  );
+  content: "";
+  pointer-events: none;
+  transform: translateX(-100%);
+  animation: section-title-gloss 8s ease-in-out infinite;
+}
+
+.section .section__title > .content-column {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes section-title-gloss {
+  0% {
+    transform: translateX(-100%);
+  }
+  22%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .section-unbounded {
   height: auto;
 }
@@ -1382,12 +1421,6 @@ button.next-section-button {
     padding-bottom: 0.75rem;
   }
 
-  #portfolio .section__title h1 {
-    margin: 0;
-    padding-block: 0.35rem;
-    font-size: 1.2rem;
-  }
-
   #portfolio .section__content {
     min-height: 0;
   }
@@ -1852,6 +1885,11 @@ button.next-section-button {
     opacity: 1;
     transform: none;
   }
+
+  .section .section__title::after {
+    animation: none;
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1872,12 +1910,6 @@ button.next-section-button {
     padding-bottom: 0.75rem;
   }
 
-  .section--hero .section__title h1 {
-    margin: 0;
-    padding-block: 0.35em;
-    font-size: clamp(1.1rem, 4vw, 1.4rem);
-  }
-
   .section--hero .hero {
     gap: clamp(0.5rem, 2svh, 1rem);
     padding-block: clamp(0.5rem, 2svh, 1rem);
@@ -1895,6 +1927,63 @@ button.next-section-button {
 
   .main-nav {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section .section__title {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    min-height: 3rem;
+    box-sizing: border-box;
+  }
+
+  .section .section__title h1 {
+    margin: 0;
+    padding-block: 0;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) and (max-height: 650px) {
+  .section--hero .hero {
+    --profile-image-size: clamp(96px, 18svh, 120px);
+    gap: 0.25rem;
+    padding-block: 0;
+  }
+
+  .section--hero .hero__content .hero__name {
+    margin-bottom: 0.15em;
+    font-size: 1.6rem;
+  }
+
+  .section--hero .hero__content .hero__role {
+    margin-bottom: 0.15em;
+    font-size: 1.05rem;
+  }
+
+  .section--hero .hero__content .hero__bio {
+    margin-block: 0.5em;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .section--hero .hero__content .hero__meta {
+    display: none;
+  }
+
+  .section--hero .hero__actions {
+    gap: 0.4rem;
+  }
+
+  .section--hero .hero__primary-actions {
+    gap: 0.4rem;
+  }
+
+  .section--hero .hero__secondary-actions .hero__social-link {
+    padding: 0.4rem;
   }
 }
 
