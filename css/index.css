@@ -1117,6 +1117,39 @@ a.hero__social-link--github:hover {
   outline-offset: 3px;
 }
 
+.github-activity {
+  margin: clamp(1.25rem, 3vh, 2rem) 0 0;
+  padding: 0.9rem 1rem 0.65rem;
+  overflow: hidden;
+  border: 1px solid var(--page-border);
+  border-radius: 1rem;
+  background-color: var(--surface-bg);
+}
+
+.github-activity__title {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.github-activity > a {
+  display: block;
+}
+
+.github-activity img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: hue-rotate(calc(var(--accent-hue) * 1deg - 200deg));
+}
+
+.github-activity > a:focus-visible {
+  border-radius: 0.2rem;
+  outline: 2px solid var(--highlight-color);
+  outline-offset: 3px;
+}
+
 .cv-card {
   display: grid;
   grid-template-columns: minmax(12rem, 0.8fr) minmax(0, 1.2fr);
@@ -1343,9 +1376,9 @@ button.next-section-button {
 
 @media (max-width: 620px) {
   #portfolio {
-    height: calc(100vh - var(--header-height));
-    height: calc(100svh - var(--header-height));
-    min-height: 0;
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
     padding-bottom: 0.75rem;
   }
 
@@ -1362,7 +1395,6 @@ button.next-section-button {
   #portfolio .section__content > .content-column {
     display: flex;
     flex-direction: column;
-    min-height: 0;
   }
 
   .project-intro h2 {
@@ -1376,11 +1408,10 @@ button.next-section-button {
   }
 
   .project-catalog {
-    flex: 1;
+    flex: 0 0 auto;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(10rem, auto));
     gap: 0.6rem;
-    min-height: 0;
     margin-top: 0.75rem;
   }
 
@@ -1704,6 +1735,8 @@ button.next-section-button {
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
+    --github-activity-filter:
+      invert(1) hue-rotate(calc(var(--accent-hue) * 1deg - 20deg));
     --button-bg: #253247;
     --button-shadow:
       0 0.2rem 0.45rem rgb(0 0 0 / 35%),
@@ -1746,6 +1779,10 @@ button.next-section-button {
   a {
     color: var(--link-color);
     text-decoration-color: var(--link-color);
+  }
+
+  .github-activity img {
+    filter: var(--github-activity-filter);
   }
 
   a:hover {
