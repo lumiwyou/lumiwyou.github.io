@@ -847,10 +847,9 @@ button:focus-visible {
 
 .hero {
   --profile-image-size: clamp(250px, 35vw, 450px);
-  --profile-image-shape: 42% 42% 32% 32% / 34% 34% 46% 46%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   padding-block: 1em;
   justify-content: center;
   gap: clamp(1.5rem, 3vw, 2.5rem);
@@ -859,9 +858,9 @@ button:focus-visible {
     position: relative;
     isolation: isolate;
     width: var(--profile-image-size);
-    height: var(--profile-image-size);
+    height: auto;
     flex: 0 0 var(--profile-image-size);
-    border-radius: var(--profile-image-shape);
+    border-radius: 1.25rem;
     background-color: var(--surface-bg);
     box-shadow:
       0 1.25rem 2.5rem rgb(20 24 35 / 24%),
@@ -884,7 +883,6 @@ button:focus-visible {
       #d52d00 360deg
     );
     content: "";
-    animation: sapphic-ring-spin 8s linear infinite;
   }
 
   .profile-image-frame::after {
@@ -901,23 +899,21 @@ button:focus-visible {
     );
     content: "";
     opacity: 0;
-    animation: sapphic-ring-spin 8s linear infinite,
-      trans-flag-fade 6s ease-in-out infinite alternate;
+    animation: trans-flag-fade 6s ease-in-out infinite alternate;
   }
 
   .profile-image {
     position: absolute;
-    inset: 11px;
+    inset: 10px;
     z-index: 1;
-    width: calc(100% - 22px);
-    height: calc(100% - 22px);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
     box-sizing: border-box;
     aspect-ratio: 1;
-    border-radius: var(--profile-image-shape);
+    border-radius: 0.75rem;
     object-fit: cover;
     object-position: center 38%;
     filter: grayscale() contrast(1.08);
-    border: 2px solid var(--surface-bg);
     box-shadow:
       0 0 0 1px rgb(255 255 255 / 38%),
       0 0.5rem 1.25rem rgb(0 0 0 / 24%);
@@ -969,12 +965,6 @@ button:focus-visible {
       color: var(--muted-color);
       font-size: 15px;
     }
-  }
-}
-
-@keyframes sapphic-ring-spin {
-  to {
-    transform: rotate(1turn);
   }
 }
 
